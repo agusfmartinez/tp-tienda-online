@@ -1,18 +1,20 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React from 'react'
 
-function ProductCard() {
+const ProductCard = () => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Body>
-        <Card.Title>Tarjeta de producto</Card.Title>
-        <Card.Text>
-          
-        </Card.Text>
-        <Button variant="primary">AGREGAR CARRITO</Button>
-      </Card.Body>
-    </Card>
-  );
+    <div className="card">
+      <img src="https://picsum.photos/id/450/200/200" className="card-img-top" alt="..."/>
+      <div className="card-body">
+        <h5 className="card-title">Producto Titulo</h5>
+        <p className="card-text">Descripcion</p>
+        <div className='d-flex gap-2 mt-auto'>
+          <a href="#" className="btn btn-primary btn-sm text-nowrap">Añadir al carrito</a>
+          <a href="#" className="btn btn-outline-secondary btn-sm text-nowrap">Ver más</a>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-export default ProductCard;
+export default ProductCard
+

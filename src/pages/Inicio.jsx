@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero';
 import CategoryCard from '../components/CategoryCard';
+import ProductCard from '../components/ProductCard';
 
 const Inicio = () => {
   return (
@@ -9,7 +10,7 @@ const Inicio = () => {
 
         <section className='container py-5'>
             <h2>Categorias</h2>
-            <div className='row'>
+            <div className='row py-2'>
                 <div className="col-12 col-md-4">
                     <CategoryCard />
                 </div>
@@ -25,7 +26,20 @@ const Inicio = () => {
 
         <section className='container py-5'>
             <h2>Nuestros productos destacados</h2>
-            
+            <div className='row py-2'>
+                <div className="col-12 col-md-3">
+                    <ProductCard />
+                </div>
+                <div className="col-12 col-md-3">
+                    <ProductCard />
+                </div>
+                <div className="col-12 col-md-3">
+                    <ProductCard />
+                </div>
+                <div className="col-12 col-md-3">
+                    <ProductCard />
+                </div>
+            </div>
         </section>
 
         <section className='container py-5'>
