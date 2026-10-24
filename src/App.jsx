@@ -10,6 +10,7 @@ import Carrito from "./pages/Carrito";
 import DatosUsuario from "./pages/DatosUsuario";
 import Nosotros from "./pages/Nosotros";
 import Productos from "./pages/Productos";
+import IniciarSesion from "./pages/IniciarSesion";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
           <Route path="/carrito" element={<Carrito/>}/>
           <Route path="/nosotros" element={<Nosotros/>}/>
           <Route path="/datosUsuario" element={<DatosUsuario/>}/>
+          <Route path="/iniciarSesion" element={<IniciarSesion/>}/>
         </Routes>
     </main>
   );

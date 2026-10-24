@@ -7,7 +7,7 @@ function ProductCard() {
       <Card.Body>
         <Card.Title>Tarjeta de producto</Card.Title>
         <Card.Text>
-          DETALLE DEL PRODUCTO
+          
         </Card.Text>
         <Button variant="primary">AGREGAR CARRITO</Button>
       </Card.Body>
