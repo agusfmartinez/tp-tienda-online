@@ -11,6 +11,7 @@ import DatosUsuario from "./pages/DatosUsuario";
 import Nosotros from "./pages/Nosotros";
 import Productos from "./pages/Productos";
 import IniciarSesion from "./pages/IniciarSesion";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +27,7 @@ function App() {
           <Route path="/datosUsuario" element={<DatosUsuario/>}/>
           <Route path="/iniciarSesion" element={<IniciarSesion/>}/>
         </Routes>
+      <Footer/>
     </main>
   );
 }
