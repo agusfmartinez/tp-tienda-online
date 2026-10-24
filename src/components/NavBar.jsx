@@ -17,7 +17,6 @@ function AppNavBar() {
             <Nav as={Link} to="/productos" className='botonesNavBar'>Productos</Nav>
             <Nav as={Link} to="/carrito" className='botonesNavBar'>Carrito</Nav>
             <Nav as={Link} to="/nosotros" className='botonesNavBar'>Nosotros</Nav>
-            <Nav as={Link} to="/FormularioCompra" className='botonesNavBar'>Formulario</Nav>
             <NavDropdown title="Mi Perfil" className='botonesNavBar' id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/datosUsuario">Mis Datos</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/carrito">Mi Carrito</NavDropdown.Item>
