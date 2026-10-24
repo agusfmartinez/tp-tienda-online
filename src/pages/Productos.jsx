@@ -4,12 +4,23 @@ import ProductCard from '../components/ProductCard';
 const Productos = () => {
   return (
     <main>
-        <h1>Acá iran los productos</h1>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
+        <section className='container py-5'>
+            <h2>Productos</h2>
+            <div className='row py-2'>
+                <div className="col-12 col-md-3">
+                    <ProductCard />
+                </div>
+                <div className="col-12 col-md-3">
+                    <ProductCard />
+                </div>
+                <div className="col-12 col-md-3">
+                    <ProductCard />
+                </div>
+                <div className="col-12 col-md-3">
+                    <ProductCard />
+                </div>
+            </div>
+        </section>
     </main>
   )
 }
