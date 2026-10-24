@@ -1,10 +1,16 @@
 import React from 'react'
+import ProductCard from '../components/ProductCard';
 
 const Productos = () => {
   return (
-    <div>
-        <h1>listado de produc</h1>
-    </div>
+    <main>
+        <h1>Acá iran los productos</h1>
+        <ProductCard className="jeje"/>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+    </main>
   )
 }
 

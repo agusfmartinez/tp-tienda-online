@@ -19,10 +19,10 @@ function App() {
       <Header/>
         <Routes>
           <Route path="/" element={<Inicio/>}/>
-          <Route path="/" element={<Productos/>}/>
-          <Route path="/" element={<Carrito/>}/>
-          <Route path="/" element={<Nosotros/>}/>
-          <Route path="/" element={<DatosUsuario/>}/>
+          <Route path="/productos" element={<Productos/>}/>
+          <Route path="/carrito" element={<Carrito/>}/>
+          <Route path="/nosotros" element={<Nosotros/>}/>
+          <Route path="/datosUsuario" element={<DatosUsuario/>}/>
         </Routes>
     </main>
   );
