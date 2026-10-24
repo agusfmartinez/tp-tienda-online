@@ -5,6 +5,11 @@
 background-color: gainsboro;
 }
 
+.hero{
+  min-height: 60vh;
+    background-size: cover;
+}
+
 .botonesNavBar {
     margin: 2px;
     margin-top: 10px;
