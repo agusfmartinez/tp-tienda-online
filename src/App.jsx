@@ -11,7 +11,9 @@ import DatosUsuario from "./pages/DatosUsuario";
 import Nosotros from "./pages/Nosotros";
 import Productos from "./pages/Productos";
 import IniciarSesion from "./pages/IniciarSesion";
+import FormularioCompra from "./components/FormularioCompra";
 import Footer from "./components/Footer";
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +28,7 @@ function App() {
           <Route path="/nosotros" element={<Nosotros/>}/>
           <Route path="/datosUsuario" element={<DatosUsuario/>}/>
           <Route path="/iniciarSesion" element={<IniciarSesion/>}/>
+          <Route path="/formularioCompra" element={<FormularioCompra/>} />
         </Routes>
       <Footer/>
     </main>
