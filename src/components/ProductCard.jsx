@@ -1,20 +1,39 @@
-import React from 'react'
+import React from 'react';
 
-const ProductCard = () => {
+const ProductCard = ({ nombre, precio }) => {
   return (
-    <div className="card">
-      <img src="https://picsum.photos/id/450/200/200" className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Producto Titulo</h5>
-        <p className="card-text">Descripcion</p>
-        <div className='d-flex gap-2 mt-auto'>
-          <a href="#" className="btn btn-primary btn-sm text-nowrap">Añadir al carrito</a>
-          <a href="#" className="btn btn-outline-secondary btn-sm text-nowrap">Ver más</a>
+    <div className="card h-100">
+      <img
+        src="https://picsum.photos/id/450/200/200"
+        className="card-img-top"
+        alt={nombre}
+      />
+
+      <div className="card-body d-flex flex-column">
+        <h5 className="card-title">{nombre}</h5>
+
+        <p className="card-text">
+          Precio: ${precio}
+        </p>
+
+        <div className="d-flex gap-2 mt-auto">
+          <button
+            type="button"
+            className="btn btn-primary btn-sm text-nowrap"
+          >
+            Añadir al carrito
+          </button>
+
+          <button
+            type="button"
+            className="btn btn-outline-secondary btn-sm text-nowrap"
+          >
+            Ver más
+          </button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductCard
-
+export default ProductCard;
