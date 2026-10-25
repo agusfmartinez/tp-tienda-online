@@ -98,6 +98,7 @@ const Productos = () => {
               onChange={(e) => setOrden(e.target.value)}
             >
               <option value="">Orden original</option>
+              <option value="">Categoria</option>
               <option value="menor">Precio: menor a mayor</option>
               <option value="mayor">Precio: mayor a menor</option>
             </select>

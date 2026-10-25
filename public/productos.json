@@ -7,6 +7,7 @@
         "imagen": "https://picsum.photos/200/200?random=1",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
+        "destacado": true,
         "caracteristicas": [
             "15 kg",
             "Sabor carne",
@@ -21,6 +22,7 @@
         "imagen": "https://picsum.photos/200/200?random=2",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
+        "destacado": false,
         "caracteristicas": [
             "20 kg",
             "Sabor carne",
@@ -35,6 +37,7 @@
         "imagen": "https://picsum.photos/200/200?random=3",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
+        "destacado": true,
         "caracteristicas": [
             "15 kg",
             "Sabor carne",
@@ -49,6 +52,7 @@
         "imagen": "https://picsum.photos/200/200?random=4",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
+        "destacado": true,
         "caracteristicas": [
             "15 kg",
             "Sabor carne",
@@ -63,6 +67,7 @@
         "imagen": "https://picsum.photos/200/200?random=1",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
+        "destacado": false,
         "caracteristicas": [
             "15 kg",
             "Sabor carne",
@@ -77,6 +82,7 @@
         "imagen": "https://picsum.photos/200/200?random=1",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
+        "destacado": false,
         "caracteristicas": [
             "15 kg",
             "Sabor carne",
@@ -91,6 +97,7 @@
         "imagen": "https://picsum.photos/200/200?random=1",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
+        "destacado": false,
         "caracteristicas": [
             "15 kg",
             "Sabor carne",
@@ -105,6 +112,7 @@
         "imagen": "https://picsum.photos/200/200?random=1",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
+        "destacado": false,
         "caracteristicas": [
             "15 kg",
             "Sabor carne",
@@ -119,6 +127,7 @@
         "imagen": "https://picsum.photos/200/200?random=1",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
+        "destacado": false,
         "caracteristicas": [
             "15 kg",
             "Sabor carne",
@@ -133,6 +142,7 @@
         "imagen": "https://picsum.photos/200/300?random=2",
         "descripcion": "Pelota resistente para juego diario.",
         "stock": 0,
+        "destacado": true,
         "caracteristicas": [
             "Goma natural",
             "6 cm de diámetro"

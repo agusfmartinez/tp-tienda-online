@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react';
 import Hero from '../components/Hero';
 import CategoryCard from '../components/CategoryCard';
 import ProductCard from '../components/ProductCard';
+import Productos from './Productos';
 
-
-const Inicio = () => {
+const Inicio = ({ nombre, precio, agregar }) => {
     let [categorias, setCategorias] = useState(null)
+    let [productos, setProductos] = useState([]);
 
     // 3. Create out useEffect function
     useEffect(() => {
@@ -14,6 +15,20 @@ const Inicio = () => {
             // 4. Setting *dogImage* to the image url that we received from the response above
         .then(data => setCategorias(data))
     },[])
+
+    useEffect(() => {
+        fetch('/productos.json')
+        .then(response => {
+            if (!response.ok) {
+            throw new Error("Error al obtener los productos");
+            }
+            return response.json();
+        })
+        .then(data => setProductos(data))
+        .catch((error) => {
+            console.error(error);
+        });
+  });
 
   return (
     <div>
@@ -35,18 +50,17 @@ const Inicio = () => {
         <section className='container py-5'>
             <h2>Nuestros productos destacados</h2>
             <div className='row py-2'>
-                <div className="col-12 col-md-3">
-                    <ProductCard />
-                </div>
-                <div className="col-12 col-md-3">
-                    <ProductCard />
-                </div>
-                <div className="col-12 col-md-3">
-                    <ProductCard />
-                </div>
-                <div className="col-12 col-md-3">
-                    <ProductCard />
-                </div>
+                {productos.filter((producto) => producto.destacado)
+                    .slice(0,4)
+                    .map((producto) => (
+                        <div key={producto.id} className="col-12 col-md-3">
+                            <ProductCard 
+                                nombre={producto.nombre}
+                                precio={producto.precio}
+                                agregar={() => agregarAlCarrito(producto)}
+                            />
+                        </div>
+                ))};
             </div>
         </section>
 
