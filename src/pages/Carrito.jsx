@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from "react-router";
 
 function Carrito() {
   const [carrito, setCarrito] = useState(() => {
@@ -27,24 +28,24 @@ function Carrito() {
   }
 
   function disminuirCantidad(id) {
-    const nuevoCarrito = carrito.map((item) => 
+    const nuevoCarrito = carrito.map((item) =>
       item.id === id ? { ...item, cantidad: item.cantidad - 1 } : item
-      ).filter((item) => 
-        item.cantidad > 0);
+    ).filter((item) =>
+      item.cantidad > 0);
 
     actualizarCarrito(nuevoCarrito);
   }
 
   function eliminarProducto(id) {
-    const nuevoCarrito = carrito.filter((item) => 
+    const nuevoCarrito = carrito.filter((item) =>
       item.id !== id
     );
 
     actualizarCarrito(nuevoCarrito);
   }
 
-  const total = carrito.reduce((suma, item) => 
-    suma + item.precio * item.cantidad,0
+  const total = carrito.reduce((suma, item) =>
+    suma + item.precio * item.cantidad, 0
   );
 
   return (
@@ -54,8 +55,8 @@ function Carrito() {
       <div>
         <h1>Acá irá el carrito</h1>
       </div>
-      {carrito.length === 0 ? ( <p>Tu carrito está vacío.</p>) : 
-        ( 
+      {carrito.length === 0 ? (<p>Tu carrito está vacío.</p>) :
+        (
           <>
             <div className="table-responsive">
               <table className="table table-bordered align-middle">
@@ -104,9 +105,16 @@ function Carrito() {
               </table>
             </div>
 
-            <h3 className="text-end">
-              Total: ${total}
-            </h3>
+            <div className="d-flex justify-content-between align-items-center mt-4">
+              <h3>Total: ${total}</h3>
+
+              <Link
+                to="/formularioCompra"
+                className="btn btn-success"
+              >
+                Finalizar compra
+              </Link>
+            </div>
           </>
         )
       }
