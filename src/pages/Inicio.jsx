@@ -2,33 +2,13 @@ import React, {useState, useEffect} from 'react';
 import Hero from '../components/Hero';
 import CategoryCard from '../components/CategoryCard';
 import ProductCard from '../components/ProductCard';
-import Productos from './Productos';
+import {useProductos} from '../hooks/productosHook'
+import {useCategorias} from '../hooks/categoriasHook'
 
-const Inicio = ({ nombre, precio, agregar }) => {
-    let [categorias, setCategorias] = useState(null)
-    let [productos, setProductos] = useState([]);
-
-    // 3. Create out useEffect function
-    useEffect(() => {
-        fetch("/categorias.json")
-        .then(response => response.json())
-            // 4. Setting *dogImage* to the image url that we received from the response above
-        .then(data => setCategorias(data))
-    },[])
-
-    useEffect(() => {
-        fetch('/productos.json')
-        .then(response => {
-            if (!response.ok) {
-            throw new Error("Error al obtener los productos");
-            }
-            return response.json();
-        })
-        .then(data => setProductos(data))
-        .catch((error) => {
-            console.error(error);
-        });
-  });
+const Inicio = () => {
+    
+    const categorias = useCategorias();
+    const productos = useProductos();
 
   return (
     <div>
