@@ -1,17 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
 
 const Productos = () => {
   const [busqueda, setBusqueda] = useState('');
   const [orden, setOrden] = useState('');
 
- /*Estos son de ejemplo*/
-  const productos = [
-    { id: 1, nombre: 'Collar', precio: 5000 },
-    { id: 2, nombre: 'Correa', precio: 8000 },
-    { id: 3, nombre: 'Juguete', precio: 3000 },
-    { id: 4, nombre: 'Cama para perro', precio: 15000 },
-  ];
+  let [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    fetch('/productos.json')
+      .then(response => {
+        console.log(response)
+        if (!response.ok) {
+          throw new Error("Error al obtener los productos");
+        }
+        return response.json();
+      })
+      .then(data => setProductos(data))
+      .catch((error) => {
+        console.error(error);
+    });
+  },[]);
 
   const productosFiltrados = [...productos]
     .filter((producto) =>
