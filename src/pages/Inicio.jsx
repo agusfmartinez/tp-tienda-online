@@ -1,9 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
 import Hero from '../components/Hero';
 import CategoryCard from '../components/CategoryCard';
 import ProductCard from '../components/ProductCard';
 
+
 const Inicio = () => {
+    let [categorias, setCategorias] = useState(null)
+
+    // 3. Create out useEffect function
+    useEffect(() => {
+        fetch("/categorias.json")
+        .then(response => response.json())
+            // 4. Setting *dogImage* to the image url that we received from the response above
+        .then(data => setCategorias(data))
+    },[])
+
   return (
     <div>
         <Hero/>
@@ -11,15 +22,12 @@ const Inicio = () => {
         <section className='container py-5'>
             <h2>Categorias</h2>
             <div className='row py-2'>
-                <div className="col-12 col-md-4">
-                    <CategoryCard />
-                </div>
-                <div className="col-12 col-md-4">
-                    <CategoryCard />
-                </div>
-                <div className="col-12 col-md-4">
-                    <CategoryCard />
-                </div>
+                {/* pendiente pasar datos de la categoria al card de categoria */}
+                {categorias && categorias.map((cat) => 
+                    <div className="col-12 col-md-4">
+                        <CategoryCard />
+                    </div>
+                )}
             </div>
             
         </section>
