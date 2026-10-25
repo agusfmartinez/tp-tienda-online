@@ -18,7 +18,7 @@ const Productos = () => {
       .then(data => setProductos(data))
       .catch((error) => {
         console.error(error);
-    });
+      });
   });
 
   const productosFiltrados = [...productos]
@@ -78,7 +78,7 @@ const Productos = () => {
       <section className="container py-5">
         <h2>Productos</h2>
 
-     
+
         <div className="row py-3">
           <div className="col-12 col-md-6 mb-3">
             <input
@@ -90,7 +90,7 @@ const Productos = () => {
             />
           </div>
 
-       
+
           <div className="col-12 col-md-6 mb-3">
             <select
               className="form-select"
@@ -105,10 +105,12 @@ const Productos = () => {
           </div>
         </div>
 
-    
+
         <div className="row py-2">
           {productosFiltrados.length > 0 ? (
             productosFiltrados.map((producto) => (
+
+
               <div
                 className="col-12 col-md-3 mb-4"
                 key={producto.id}
@@ -117,6 +119,9 @@ const Productos = () => {
                   nombre={producto.nombre}
                   precio={producto.precio}
                   agregar={() => agregarAlCarrito(producto)}
+                  categoria={producto.categoria}
+                  descripcion={producto.descripcion}
+                  stock={producto.stock}
                 />
               </div>
             ))
