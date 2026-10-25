@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductCard = ({ nombre, precio }) => {
+const ProductCard = ({ nombre, precio, agregar }) => {
   return (
     <div className="card h-100">
       <img
@@ -20,6 +20,7 @@ const ProductCard = ({ nombre, precio }) => {
           <button
             type="button"
             className="btn btn-primary btn-sm text-nowrap"
+            onClick={agregar}
           >
             Añadir al carrito
           </button>

@@ -10,7 +10,6 @@ const Productos = () => {
   useEffect(() => {
     fetch('/productos.json')
       .then(response => {
-        console.log(response)
         if (!response.ok) {
           throw new Error("Error al obtener los productos");
         }
@@ -20,7 +19,7 @@ const Productos = () => {
       .catch((error) => {
         console.error(error);
     });
-  },[]);
+  });
 
   const productosFiltrados = [...productos]
     .filter((producto) =>
@@ -37,6 +36,42 @@ const Productos = () => {
 
       return 0;
     });
+
+  const [carrito, setCarrito] = useState(() => {
+    return JSON.parse(localStorage.getItem("carrito") || "[]");
+  });
+
+  function agregarAlCarrito(producto) {
+    const existente = carrito.find(
+      (item) => item.id === producto.id
+    );
+
+    const cantidadActual = existente
+      ? existente.cantidad
+      : 0;
+
+    if (cantidadActual >= producto.stock) {
+      return;
+    }
+
+    let nuevoCarrito;
+
+    if (existente) {
+      nuevoCarrito = carrito.map((item) =>
+        item.id === producto.id
+          ? { ...item, cantidad: item.cantidad + 1 }
+          : item
+      );
+    } else {
+      nuevoCarrito = [
+        ...carrito,
+        { ...producto, cantidad: 1 }
+      ];
+    }
+
+    setCarrito(nuevoCarrito);
+    localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
+  }
 
   return (
     <main>
@@ -80,6 +115,7 @@ const Productos = () => {
                 <ProductCard
                   nombre={producto.nombre}
                   precio={producto.precio}
+                  agregar={() => agregarAlCarrito(producto)}
                 />
               </div>
             ))
