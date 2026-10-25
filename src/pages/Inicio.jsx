@@ -17,14 +17,14 @@ const Inicio = () => {
         <section className='container py-5'>
             <h2>Categorias</h2>
             <div className='row py-2'>
-                {/* pendiente pasar datos de la categoria al card de categoria */}
-                {categorias && categorias.map((cat) => 
-                    <div className="col-12 col-md-4">
-                        <CategoryCard />
+                {categorias.map((c) => (
+                    <div key={c.id} className="col-12 col-md-4">
+                        <CategoryCard 
+                            nombre={c.categoria}
+                        />
                     </div>
-                )}
+                ))}
             </div>
-            
         </section>
 
         <section className='container py-5'>
@@ -40,7 +40,7 @@ const Inicio = () => {
                                 agregar={() => agregarAlCarrito(producto)}
                             />
                         </div>
-                ))};
+                ))}
             </div>
         </section>
 

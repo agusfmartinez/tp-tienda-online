@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 export function useCategorias() {
 
-    let [categorias, setCategorias] = useState(null)
+    const [categorias, setCategorias] = useState([])
 
     useEffect(() => {
         fetch('/categorias.json')

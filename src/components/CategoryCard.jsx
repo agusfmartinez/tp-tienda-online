@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-const CategoryCard = () => {
+const CategoryCard = ({nombre}) => {
   return (
     <div className="card">
         <div className="row g-0">
@@ -10,7 +10,7 @@ const CategoryCard = () => {
             </div>
             <div className="col-md-8">
                 <div className="d-flex align-items-center justify-content-start h-100 p-3">
-                    <Link to="/productos" className='mb-0'><h5>Categoria titulo</h5></Link>
+                    <Link to="/productos" className='mb-0'><h5>{nombre}</h5></Link>
                 </div>
             </div>
         </div>
