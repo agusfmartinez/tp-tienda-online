@@ -1,0 +1,141 @@
+[
+    {
+        "id": 1,
+        "nombre": "Alimento balanceado adulto 15kg",
+        "categoria": "Alimentos",
+        "precio": 45000,
+        "imagen": "https://picsum.photos/200/200?random=1",
+        "descripcion": "Alimento completo para perros adultos de raza mediana.",
+        "stock": 10,
+        "caracteristicas": [
+            "15 kg",
+            "Sabor carne",
+            "Para razas medianas"
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Alimento balanceado adulto 20kg",
+        "categoria": "Alimentos",
+        "precio": 55000,
+        "imagen": "https://picsum.photos/200/200?random=2",
+        "descripcion": "Alimento completo para perros adultos de raza mediana.",
+        "stock": 10,
+        "caracteristicas": [
+            "20 kg",
+            "Sabor carne",
+            "Para razas grandes"
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Alimento balanceado adulto 15kg",
+        "categoria": "Alimentos",
+        "precio": 45000,
+        "imagen": "https://picsum.photos/200/200?random=3",
+        "descripcion": "Alimento completo para perros adultos de raza mediana.",
+        "stock": 10,
+        "caracteristicas": [
+            "15 kg",
+            "Sabor carne",
+            "Para razas medianas"
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "Alimento balanceado adulto 15kg",
+        "categoria": "Alimentos",
+        "precio": 45000,
+        "imagen": "https://picsum.photos/200/200?random=4",
+        "descripcion": "Alimento completo para perros adultos de raza mediana.",
+        "stock": 10,
+        "caracteristicas": [
+            "15 kg",
+            "Sabor carne",
+            "Para razas medianas"
+        ]
+    },
+    {
+        "id": 5,
+        "nombre": "Alimento balanceado adulto 15kg",
+        "categoria": "Alimentos",
+        "precio": 45000,
+        "imagen": "https://picsum.photos/200/200?random=1",
+        "descripcion": "Alimento completo para perros adultos de raza mediana.",
+        "stock": 10,
+        "caracteristicas": [
+            "15 kg",
+            "Sabor carne",
+            "Para razas medianas"
+        ]
+    },
+    {
+        "id": 6,
+        "nombre": "Alimento balanceado adulto 15kg",
+        "categoria": "Alimentos",
+        "precio": 45000,
+        "imagen": "https://picsum.photos/200/200?random=1",
+        "descripcion": "Alimento completo para perros adultos de raza mediana.",
+        "stock": 10,
+        "caracteristicas": [
+            "15 kg",
+            "Sabor carne",
+            "Para razas medianas"
+        ]
+    },
+    {
+        "id": 7,
+        "nombre": "Alimento balanceado adulto 15kg",
+        "categoria": "Alimentos",
+        "precio": 45000,
+        "imagen": "https://picsum.photos/200/200?random=1",
+        "descripcion": "Alimento completo para perros adultos de raza mediana.",
+        "stock": 10,
+        "caracteristicas": [
+            "15 kg",
+            "Sabor carne",
+            "Para razas medianas"
+        ]
+    },
+    {
+        "id": 8,
+        "nombre": "Alimento balanceado adulto 15kg",
+        "categoria": "Alimentos",
+        "precio": 45000,
+        "imagen": "https://picsum.photos/200/200?random=1",
+        "descripcion": "Alimento completo para perros adultos de raza mediana.",
+        "stock": 10,
+        "caracteristicas": [
+            "15 kg",
+            "Sabor carne",
+            "Para razas medianas"
+        ]
+    },
+    {
+        "id": 9,
+        "nombre": "Alimento balanceado adulto 15kg",
+        "categoria": "Alimentos",
+        "precio": 45000,
+        "imagen": "https://picsum.photos/200/200?random=1",
+        "descripcion": "Alimento completo para perros adultos de raza mediana.",
+        "stock": 10,
+        "caracteristicas": [
+            "15 kg",
+            "Sabor carne",
+            "Para razas medianas"
+        ]
+    },
+    {
+        "id": 10,
+        "nombre": "Pelota de goma",
+        "categoria": "Juguetes",
+        "precio": 3500,
+        "imagen": "https://picsum.photos/200/300?random=2",
+        "descripcion": "Pelota resistente para juego diario.",
+        "stock": 0,
+        "caracteristicas": [
+            "Goma natural",
+            "6 cm de diámetro"
+        ]
+    }
+]
