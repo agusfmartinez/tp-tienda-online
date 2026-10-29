@@ -1,3 +1,4 @@
+
 [
     {
         "id": 1,
@@ -8,144 +9,215 @@
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
         "destacado": true,
-        "caracteristicas": [
-            "15 kg",
-            "Sabor carne",
-            "Para razas medianas"
-        ]
+        "caracteristicas": ["15 kg", "Sabor carne", "Razas medianas"]
     },
     {
         "id": 2,
-        "nombre": "Alimento balanceado adulto 20kg",
+        "nombre": "Alimento balanceado cachorro 10kg",
         "categoria": "Alimentos",
-        "precio": 55000,
+        "precio": 38000,
         "imagen": "https://picsum.photos/200/200?random=2",
-        "descripcion": "Alimento completo para perros adultos de raza mediana.",
-        "stock": 10,
-        "destacado": false,
-        "caracteristicas": [
-            "20 kg",
-            "Sabor carne",
-            "Para razas grandes"
-        ]
+        "descripcion": "Alimento especialmente formulado para cachorros en crecimiento.",
+        "stock": 15,
+        "destacado": true,
+        "caracteristicas": ["10 kg", "Sabor pollo", "Para cachorros"]
     },
     {
         "id": 3,
-        "nombre": "Alimento balanceado adulto 15kg",
+        "nombre": "Alimento balanceado adulto 20kg",
         "categoria": "Alimentos",
-        "precio": 45000,
+        "precio": 55000,
         "imagen": "https://picsum.photos/200/200?random=3",
-        "descripcion": "Alimento completo para perros adultos de raza mediana.",
-        "stock": 10,
-        "destacado": true,
-        "caracteristicas": [
-            "15 kg",
-            "Sabor carne",
-            "Para razas medianas"
-        ]
+        "descripcion": "Alimento completo para perros adultos de razas grandes.",
+        "stock": 8,
+        "destacado": false,
+        "caracteristicas": ["20 kg", "Sabor carne", "Razas grandes"]
     },
     {
         "id": 4,
-        "nombre": "Alimento balanceado adulto 15kg",
+        "nombre": "Alimento para gatos adultos 7kg",
         "categoria": "Alimentos",
-        "precio": 45000,
+        "precio": 32000,
         "imagen": "https://picsum.photos/200/200?random=4",
-        "descripcion": "Alimento completo para perros adultos de raza mediana.",
-        "stock": 10,
+        "descripcion": "Alimento balanceado para gatos adultos de todas las razas.",
+        "stock": 12,
         "destacado": true,
-        "caracteristicas": [
-            "15 kg",
-            "Sabor carne",
-            "Para razas medianas"
-        ]
+        "caracteristicas": ["7 kg", "Sabor pescado", "Para gatos adultos"]
     },
     {
         "id": 5,
-        "nombre": "Alimento balanceado adulto 15kg",
+        "nombre": "Alimento húmedo para perros",
         "categoria": "Alimentos",
-        "precio": 45000,
-        "imagen": "https://picsum.photos/200/200?random=1",
-        "descripcion": "Alimento completo para perros adultos de raza mediana.",
-        "stock": 10,
+        "precio": 2500,
+        "imagen": "https://picsum.photos/200/200?random=5",
+        "descripcion": "Alimento húmedo completo para complementar la alimentación diaria.",
+        "stock": 25,
         "destacado": false,
-        "caracteristicas": [
-            "15 kg",
-            "Sabor carne",
-            "Para razas medianas"
-        ]
+        "caracteristicas": ["Sobre de 100 g", "Sabor carne", "Fácil digestión"]
     },
     {
         "id": 6,
-        "nombre": "Alimento balanceado adulto 15kg",
-        "categoria": "Alimentos",
-        "precio": 45000,
-        "imagen": "https://picsum.photos/200/200?random=1",
-        "descripcion": "Alimento completo para perros adultos de raza mediana.",
-        "stock": 10,
-        "destacado": false,
-        "caracteristicas": [
-            "15 kg",
-            "Sabor carne",
-            "Para razas medianas"
-        ]
+        "nombre": "Pelota de goma resistente",
+        "categoria": "Juguetes",
+        "precio": 3500,
+        "imagen": "https://picsum.photos/200/200?random=6",
+        "descripcion": "Pelota resistente ideal para juegos y actividades al aire libre.",
+        "stock": 20,
+        "destacado": true,
+        "caracteristicas": ["Goma natural", "6 cm de diámetro", "Fácil de limpiar"]
     },
     {
         "id": 7,
-        "nombre": "Alimento balanceado adulto 15kg",
-        "categoria": "Alimentos",
-        "precio": 45000,
-        "imagen": "https://picsum.photos/200/200?random=1",
-        "descripcion": "Alimento completo para perros adultos de raza mediana.",
-        "stock": 10,
+        "nombre": "Hueso de juguete mordedor",
+        "categoria": "Juguetes",
+        "precio": 4200,
+        "imagen": "https://picsum.photos/200/200?random=7",
+        "descripcion": "Juguete diseñado para entretener a los perros y estimular la masticación.",
+        "stock": 15,
         "destacado": false,
-        "caracteristicas": [
-            "15 kg",
-            "Sabor carne",
-            "Para razas medianas"
-        ]
+        "caracteristicas": ["Material resistente", "Tamaño mediano", "Antideslizante"]
     },
     {
         "id": 8,
-        "nombre": "Alimento balanceado adulto 15kg",
-        "categoria": "Alimentos",
-        "precio": 45000,
-        "imagen": "https://picsum.photos/200/200?random=1",
-        "descripcion": "Alimento completo para perros adultos de raza mediana.",
-        "stock": 10,
-        "destacado": false,
-        "caracteristicas": [
-            "15 kg",
-            "Sabor carne",
-            "Para razas medianas"
-        ]
+        "nombre": "Cuerda trenzada para perros",
+        "categoria": "Juguetes",
+        "precio": 5000,
+        "imagen": "https://picsum.photos/200/200?random=8",
+        "descripcion": "Cuerda ideal para juegos de tirar y aflojar.",
+        "stock": 18,
+        "destacado": true,
+        "caracteristicas": ["Algodón trenzado", "30 cm", "Lavable"]
     },
     {
         "id": 9,
-        "nombre": "Alimento destacado adulto 15kg",
-        "categoria": "Alimentos",
-        "precio": 45000,
-        "imagen": "https://picsum.photos/200/200?random=1",
-        "descripcion": "Alimento completo para perros adultos de raza mediana.",
-        "stock": 10,
-        "destacado": true,
-        "caracteristicas": [
-            "15 kg",
-            "Sabor carne",
-            "Para razas medianas"
-        ]
+        "nombre": "Ratón de juguete para gatos",
+        "categoria": "Juguetes",
+        "precio": 1800,
+        "imagen": "https://picsum.photos/200/200?random=9",
+        "descripcion": "Pequeño juguete para estimular el instinto de juego de los gatos.",
+        "stock": 30,
+        "destacado": false,
+        "caracteristicas": ["Tela suave", "Con sonido", "Liviano"]
     },
     {
         "id": 10,
-        "nombre": "Pelota de goma",
-        "categoria": "Juguetes",
-        "precio": 3500,
-        "imagen": "https://picsum.photos/200/300?random=2",
-        "descripcion": "Pelota resistente para juego diario.",
-        "stock": 0,
+        "nombre": "Shampoo para perros 500ml",
+        "categoria": "Higiene",
+        "precio": 6500,
+        "imagen": "https://picsum.photos/200/200?random=10",
+        "descripcion": "Shampoo para la limpieza del pelaje de perros.",
+        "stock": 14,
         "destacado": true,
-        "caracteristicas": [
-            "Goma natural",
-            "6 cm de diámetro"
-        ]
+        "caracteristicas": ["500 ml", "Aroma suave", "Uso para perros"]
+    },
+    {
+        "id": 11,
+        "nombre": "Cepillo para mascotas",
+        "categoria": "Higiene",
+        "precio": 4800,
+        "imagen": "https://picsum.photos/200/200?random=11",
+        "descripcion": "Cepillo para desenredar y retirar el pelo suelto.",
+        "stock": 12,
+        "destacado": false,
+        "caracteristicas": ["Cerdas suaves", "Mango ergonómico", "Fácil limpieza"]
+    },
+    {
+        "id": 12,
+        "nombre": "Toallitas húmedas para mascotas",
+        "categoria": "Higiene",
+        "precio": 3500,
+        "imagen": "https://picsum.photos/200/200?random=12",
+        "descripcion": "Toallitas para limpiar las patas y el pelaje de las mascotas.",
+        "stock": 20,
+        "destacado": false,
+        "caracteristicas": ["Pack de 50 unidades", "Sin alcohol", "Uso externo"]
+    },
+    {
+        "id": 13,
+        "nombre": "Pasta dental para perros",
+        "categoria": "Higiene",
+        "precio": 5200,
+        "imagen": "https://picsum.photos/200/200?random=13",
+        "descripcion": "Pasta dental especialmente formulada para la higiene bucal canina.",
+        "stock": 10,
+        "destacado": true,
+        "caracteristicas": ["70 g", "Sabor pollo", "Uso veterinario"]
+    },
+    {
+        "id": 14,
+        "nombre": "Collar ajustable para perros",
+        "categoria": "Accesorios",
+        "precio": 6000,
+        "imagen": "https://picsum.photos/200/200?random=14",
+        "descripcion": "Collar cómodo y resistente para paseos diarios.",
+        "stock": 16,
+        "destacado": true,
+        "caracteristicas": ["Tamaño ajustable", "Nylon resistente", "Hebilla segura"]
+    },
+    {
+        "id": 15,
+        "nombre": "Correa de paseo 1,5 metros",
+        "categoria": "Accesorios",
+        "precio": 7500,
+        "imagen": "https://picsum.photos/200/200?random=15",
+        "descripcion": "Correa resistente para pasear perros de diferentes tamaños.",
+        "stock": 12,
+        "destacado": false,
+        "caracteristicas": ["1,5 metros", "Nylon", "Mosquetón metálico"]
+    },
+    {
+        "id": 16,
+        "nombre": "Comedero de acero inoxidable",
+        "categoria": "Accesorios",
+        "precio": 8500,
+        "imagen": "https://picsum.photos/200/200?random=16",
+        "descripcion": "Recipiente resistente para servir alimento o agua.",
+        "stock": 10,
+        "destacado": true,
+        "caracteristicas": ["Acero inoxidable", "Antideslizante", "Capacidad 1 litro"]
+    },
+    {
+        "id": 17,
+        "nombre": "Transportadora para gatos",
+        "categoria": "Accesorios",
+        "precio": 28000,
+        "imagen": "https://picsum.photos/200/200?random=17",
+        "descripcion": "Transportadora práctica para trasladar gatos de forma segura.",
+        "stock": 6,
+        "destacado": false,
+        "caracteristicas": ["Plástico resistente", "Ventilación lateral", "Puerta metálica"]
+    },
+    {
+        "id": 18,
+        "nombre": "Cama acolchada mediana",
+        "categoria": "Camas",
+        "precio": 22000,
+        "imagen": "https://picsum.photos/200/200?random=18",
+        "descripcion": "Cama cómoda y acolchada para el descanso de perros medianos.",
+        "stock": 8,
+        "destacado": true,
+        "caracteristicas": ["Tamaño mediano", "Relleno acolchado", "Base antideslizante"]
+    },
+    {
+        "id": 19,
+        "nombre": "Cama pequeña para gatos",
+        "categoria": "Camas",
+        "precio": 18000,
+        "imagen": "https://picsum.photos/200/200?random=19",
+        "descripcion": "Cama suave y confortable ideal para gatos y mascotas pequeñas.",
+        "stock": 9,
+        "destacado": false,
+        "caracteristicas": ["Tamaño pequeño", "Tela suave", "Lavable"]
+    },
+    {
+        "id": 20,
+        "nombre": "Cucha grande para perros",
+        "categoria": "Camas",
+        "precio": 35000,
+        "imagen": "https://picsum.photos/200/200?random=20",
+        "descripcion": "Cucha amplia y resistente para perros de razas grandes.",
+        "stock": 5,
+        "destacado": true,
+        "caracteristicas": ["Tamaño grande", "Material resistente", "Fácil limpieza"]
     }
 ]
