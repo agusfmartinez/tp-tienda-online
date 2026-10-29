@@ -10,6 +10,26 @@ const Inicio = () => {
     const categorias = useCategorias();
     const productos = useProductos();
 
+    function agregarAlCarrito(producto) {
+        const carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
+        const existente = carrito.find((item) => item.id === producto.id);
+        const cantidadActual = existente ? existente.cantidad : 0;
+
+        if (cantidadActual >= producto.stock) {
+            return;
+        }
+
+        const nuevoCarrito = existente
+            ? carrito.map((item) =>
+                item.id === producto.id
+                    ? { ...item, cantidad: item.cantidad + 1 }
+                    : item
+            )
+            : [...carrito, { ...producto, cantidad: 1 }];
+
+        localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
+    }
+
   return (
     <div>
         <Hero/>
@@ -18,7 +38,7 @@ const Inicio = () => {
             <h2>Categorias</h2>
             <div className='row py-2'>
                 {categorias.map((c) => (
-                    <div key={c.id} className="col-12 col-md-4">
+                    <div key={c.id} className="col-12 col-md-4 pb-3">
                         <CategoryCard 
                             nombre={c.categoria}
                         />
