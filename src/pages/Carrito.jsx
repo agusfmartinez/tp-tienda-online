@@ -48,6 +48,10 @@ function Carrito() {
     suma + item.precio * item.cantidad, 0
   );
 
+  const cantidadTotal = carrito.reduce((suma, item) =>
+    suma + item.cantidad, 0
+  );
+
   return (
     // En la parte del "Eliminar" quiero dejar el boton por fuera de la tabla,
     // Resta reorganizar las columnas
@@ -106,6 +110,11 @@ function Carrito() {
             </div>
 
             <div className="d-flex justify-content-between align-items-center mt-4">
+
+              <p>
+                Cantidad total de productos: <strong>{cantidadTotal}</strong>
+              </p>
+
               <h3>Total: ${total}</h3>
 
               <Link
