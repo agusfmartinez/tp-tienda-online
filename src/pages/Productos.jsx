@@ -19,7 +19,7 @@ const Productos = () => {
       .catch((error) => {
         console.error(error);
       });
-  });
+  }, []);
 
   const productosFiltrados = [...productos]
     .filter((producto) =>
