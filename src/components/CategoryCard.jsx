@@ -10,7 +10,9 @@ const CategoryCard = ({nombre}) => {
             </div>
             <div className="col-md-8">
                 <div className="d-flex align-items-center justify-content-start h-100 p-3">
-                    <Link to="/productos" className='mb-0'><h5>{nombre}</h5></Link>
+                    <Link to={`/productos?categoria=${encodeURIComponent(nombre)}`} className='mb-0'>
+                        <h5>{nombre}</h5>
+                    </Link>
                 </div>
             </div>
         </div>

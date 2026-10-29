@@ -121,13 +121,13 @@
     },
     {
         "id": 9,
-        "nombre": "Alimento balanceado adulto 15kg",
+        "nombre": "Alimento destacado adulto 15kg",
         "categoria": "Alimentos",
         "precio": 45000,
         "imagen": "https://picsum.photos/200/200?random=1",
         "descripcion": "Alimento completo para perros adultos de raza mediana.",
         "stock": 10,
-        "destacado": false,
+        "destacado": true,
         "caracteristicas": [
             "15 kg",
             "Sabor carne",
