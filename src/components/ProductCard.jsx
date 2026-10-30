@@ -25,8 +25,12 @@ const ProductCard = ({
         <p className="card-text">Precio: ${precio}</p>
         <p className="card-text">Stock: {stock}</p>
 
-        <div className="d-flex">
-          <button className="btn btn-primary" onClick={agregar}>
+         <div className="d-flex gap-2">
+          <button
+            className="btn btn-primary"
+            onClick={agregar}
+            disabled={stock <= 0}
+          >
             Añadir al carrito
           </button>
 
@@ -34,6 +38,10 @@ const ProductCard = ({
             Ver más
           </button>
         </div>
+
+        {stock <= 0 && (
+          <p className="text-danger mt-2">Producto sin stock</p>
+        )}
       </div>
     </div>
   )
