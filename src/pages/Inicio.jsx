@@ -58,6 +58,10 @@ const Inicio = () => {
                                 nombre={producto.nombre}
                                 precio={producto.precio}
                                 agregar={() => agregarAlCarrito(producto)}
+                                categoria={producto.categoria}
+                                descripcion={producto.descripcion}
+                                stock={producto.stock}
+                                imagen={producto.imagen}
                             />
                         </div>
                 ))}

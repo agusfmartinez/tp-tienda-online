@@ -164,6 +164,7 @@ const Productos = () => {
                   categoria={producto.categoria}
                   descripcion={producto.descripcion}
                   stock={producto.stock}
+                  imagen={producto.imagen}
                 />
               </div>
             ))
