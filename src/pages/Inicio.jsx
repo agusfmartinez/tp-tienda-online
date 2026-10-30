@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from 'react';
 import Hero from '../components/Hero';
 import CategoryCard from '../components/CategoryCard';
 import ProductCard from '../components/ProductCard';
