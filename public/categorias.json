@@ -18,5 +18,10 @@
         "id": 4,
         "categoria": "Correas",
         "imagen": "https://picsum.photos/200/200?random=13"
+    },
+     {
+        "id": 5,
+        "categoria": "Higiene",
+        "imagen": "https://picsum.photos/200/200?random=13"
     }
 ]
