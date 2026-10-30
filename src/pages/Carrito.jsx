@@ -1,56 +1,18 @@
 import React from 'react'
-import { useState } from 'react';
 import { Link } from "react-router";
+import {useCarrito} from '../hooks/carritoHook';
 
-function Carrito() {
-  const [carrito, setCarrito] = useState(() => {
-    return JSON.parse(localStorage.getItem("carrito") || "[]");
-  });
 
-  function actualizarCarrito(nuevoCarrito) {
-    setCarrito(nuevoCarrito);
-    // Usamos el localStorage para mantenter persistido el carrito
-    // y debemos pasarlo a string porque localStorage solo acepta texto
-    localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
-  }
+const Carrito = () => {
 
-  function aumentarCantidad(id) {
-    const producto = carrito.find((item) => item.id === id);
-    if (!producto || producto.cantidad >= producto.stock) {
-      return;
-    }
-
-    const nuevoCarrito = carrito.map((item) =>
-      item.id === id ? { ...item, cantidad: item.cantidad + 1 } : item
-    );
-
-    actualizarCarrito(nuevoCarrito);
-  }
-
-  function disminuirCantidad(id) {
-    const nuevoCarrito = carrito.map((item) =>
-      item.id === id ? { ...item, cantidad: item.cantidad - 1 } : item
-    ).filter((item) =>
-      item.cantidad > 0);
-
-    actualizarCarrito(nuevoCarrito);
-  }
-
-  function eliminarProducto(id) {
-    const nuevoCarrito = carrito.filter((item) =>
-      item.id !== id
-    );
-
-    actualizarCarrito(nuevoCarrito);
-  }
-
-  const total = carrito.reduce((suma, item) =>
-    suma + item.precio * item.cantidad, 0
-  );
-
-  const cantidadTotal = carrito.reduce((suma, item) =>
-    suma + item.cantidad, 0
-  );
+  const {
+    carrito,
+    aumentarCantidad,
+    disminuirCantidad,
+    eliminarProducto,
+    total,
+    cantidadTotal,
+  } = useCarrito();
 
   return (
     // En la parte del "Eliminar" quiero dejar el boton por fuera de la tabla,
