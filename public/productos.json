@@ -18,7 +18,7 @@
         "precio": 38000,
         "imagen": "https://picsum.photos/200/200?random=2",
         "descripcion": "Alimento especialmente formulado para cachorros en crecimiento.",
-        "stock": 15,
+        "stock": 0,
         "destacado": true,
         "caracteristicas": ["10 kg", "Sabor pollo", "Para cachorros"]
     },
@@ -139,7 +139,7 @@
         "precio": 5200,
         "imagen": "https://picsum.photos/200/200?random=13",
         "descripcion": "Pasta dental especialmente formulada para la higiene bucal canina.",
-        "stock": 10,
+        "stock": 0,
         "destacado": true,
         "caracteristicas": ["70 g", "Sabor pollo", "Uso veterinario"]
     },
@@ -157,7 +157,7 @@
     {
         "id": 15,
         "nombre": "Correa de paseo 1,5 metros",
-        "categoria": "Accesorios",
+        "categoria": "Correas",
         "precio": 7500,
         "imagen": "https://picsum.photos/200/200?random=15",
         "descripcion": "Correa resistente para pasear perros de diferentes tamaños.",
@@ -219,5 +219,38 @@
         "stock": 5,
         "destacado": true,
         "caracteristicas": ["Tamaño grande", "Material resistente", "Fácil limpieza"]
+    },
+      {
+        "id": 21,
+        "nombre": "Correa deportiva manos libres",
+        "categoria": "Correas",
+        "precio": 12500,
+        "imagen": "https://picsum.photos/200/200?random=16",
+        "descripcion": "Correa diseñada para pasear o correr junto a tu mascota.",
+        "stock": 9,
+        "destacado": false,
+        "caracteristicas": ["Longitud ajustable", "Cinturón regulable", "Material elástico"]
+    },
+       {
+        "id": 22,
+        "nombre": "Correa doble para dos perros",
+        "categoria": "Correas",
+        "precio": 11000,
+        "imagen": "https://picsum.photos/200/200?random=20",
+        "descripcion": "Correa doble que permite pasear dos perros utilizando una sola correa principal.",
+        "stock": 0,
+        "destacado": true,
+        "caracteristicas": ["Dos enganches", "Nylon resistente", "Mosquetones metálicos"]
+    },
+    {
+        "id": 23,
+        "nombre": "Correa de paseo clásica",
+        "categoria": "Correas",
+        "precio": 7500,
+        "imagen": "https://picsum.photos/200/200?random=13",
+        "descripcion": "Correa resistente para pasear perros de diferentes tamaños.",
+        "stock": 12,
+        "destacado": true,
+        "caracteristicas": ["1,5 metros", "Nylon resistente", "Mosquetón metálico"]
     }
 ]
