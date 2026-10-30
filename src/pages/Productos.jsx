@@ -2,6 +2,8 @@ import { useState } from 'react';
 import ProductCard from '../components/ProductCard';
 import { useCarrito } from '../hooks/carritoHook';
 import { useProductos } from '../hooks/productosHook';
+import { useSearchParams } from 'react-router';
+import { useCategorias } from '../hooks/categoriasHook';
 
 const Productos = () => {
   const [busqueda, setBusqueda] = useState('');
@@ -9,7 +11,10 @@ const Productos = () => {
   const productos = useProductos()
   const { agregarAlCarrito } = useCarrito();
 
-  
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categorias = useCategorias()
+
+  const categoriaFiltro = searchParams.get('categoria');
 
   const productosFiltrados = [...productos]
     .filter((producto) =>
@@ -38,6 +43,14 @@ const Productos = () => {
       return 0;
     });
 
+  function cambiarCategoria(e) {
+    const valor = e.target.value
+    if (valor === ""){
+      setSearchParams({})
+    } else {
+      setSearchParams({categoria: valor})
+    }
+  }
   return (
     <main>
       <section className="container py-5">
@@ -54,7 +67,6 @@ const Productos = () => {
               onChange={(e) => setBusqueda(e.target.value)}
             />
           </div>
-
 
           <div className="col-12 col-md-4 mb-3">
             <select
