@@ -10,6 +10,13 @@ background-color: gainsboro;
   background-size: cover;
 }
 
+.logoHero {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+
 .botonesNavBar {
     margin: 2px;
     margin-top: 10px;

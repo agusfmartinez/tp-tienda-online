@@ -13,9 +13,20 @@ const Productos = () => {
 
   const productosFiltrados = [...productos]
     .filter((producto) =>
+      !categoriaFiltro || producto.categoria === categoriaFiltro
+    )
+    .filter((producto) =>
       producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
     )
     .sort((a, b) => {
+      if (orden === 'az') {
+        return a.nombre.localeCompare(b.nombre);
+      }
+
+      if (orden === 'za') {
+        return b.nombre.localeCompare(a.nombre);
+      }
+
       if (orden === 'menor') {
         return a.precio - b.precio;
       }
@@ -34,7 +45,7 @@ const Productos = () => {
 
 
         <div className="row py-3">
-          <div className="col-12 col-md-6 mb-3">
+          <div className="col-12 col-md-4 mb-3">
             <input
               type="text"
               className="form-control"
@@ -45,16 +56,31 @@ const Productos = () => {
           </div>
 
 
-          <div className="col-12 col-md-6 mb-3">
+          <div className="col-12 col-md-4 mb-3">
             <select
               className="form-select"
-              value={orden}
-              onChange={(e) => setOrden(e.target.value)}
+              value={categoriaFiltro || ''}
+              onChange={cambiarCategoria}
             >
-              <option value="">Orden original</option>
-              <option value="">Categoria</option>
+              <option value="">Todas las categorias</option>
+              {categorias.map((c) => (
+                <option key={c.id} value={c.categoria}>{c.categoria}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="col-12 col-md-4 mb-3">
+              <select
+                className="form-select"
+                value={orden}
+                onChange={(e) => setOrden(e.target.value)}
+              >
+              <option value="">Ordenar por...</option>
+              <option value="az">Nombre: A-Z</option>
+              <option value="za">Nombre: Z-A</option>
               <option value="menor">Precio: menor a mayor</option>
               <option value="mayor">Precio: mayor a menor</option>
+
             </select>
           </div>
         </div>
@@ -76,6 +102,7 @@ const Productos = () => {
                   categoria={producto.categoria}
                   descripcion={producto.descripcion}
                   stock={producto.stock}
+                  imagen={producto.imagen}
                 />
               </div>
             ))

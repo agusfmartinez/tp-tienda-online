@@ -1,13 +1,14 @@
 
 import { Container, Row, Col } from "react-bootstrap";
+import Logo from "./Logo";
 
 function Footer() {
     return (<footer>
             <Container>
                 <Row>
                     <Col md={6}>
-                        <h5>El Doggy Style</h5>
-                        <p>&copy; 2023 El Doggy Style. Todos los derechos reservados.</p>
+                        <Logo height={100}/>
+                        <p>&copy; 2026 El Doggy Style. Todos los derechos reservados.</p>
                     </Col>
                     <Col md={6}>
                         <h5>Contáctanos</h5>

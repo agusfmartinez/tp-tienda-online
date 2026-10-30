@@ -50,13 +50,17 @@ const Inicio = () => {
             <h2>Nuestros productos destacados</h2>
             <div className='row py-2'>
                 {productos.filter((producto) => producto.destacado)
-                    .slice(0,4)
+                    .slice(0,5)
                     .map((producto) => (
-                        <div key={producto.id} className="col-12 col-md-3">
+                        <div key={producto.id} className="col-12 col-md-3 pb-3">
                             <ProductCard 
                                 nombre={producto.nombre}
                                 precio={producto.precio}
                                 agregar={() => agregarAlCarrito(producto)}
+                                categoria={producto.categoria}
+                                descripcion={producto.descripcion}
+                                stock={producto.stock}
+                                imagen={producto.imagen}
                             />
                         </div>
                 ))}

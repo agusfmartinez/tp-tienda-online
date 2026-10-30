@@ -6,12 +6,13 @@ const ProductCard = ({
   agregar,
   categoria,
   descripcion,
-  stock
+  stock,
+  imagen
 }) => {
   return (
     <div className="card">
       <img
-        src="https://picsum.photos/id/450/200/200"
+        src={imagen}
         className="card-img-top"
         alt="..."
       />
