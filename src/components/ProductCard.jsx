@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const ProductCard = ({
+  id,
   nombre,
   precio,
   agregar,
@@ -34,9 +36,9 @@ const ProductCard = ({
             Añadir al carrito
           </button>
 
-          <button className="btn btn-secondary">
-            Ver más
-          </button>
+          <Link to={`/producto/${id}`} className='btn btn-secondary'>
+              Ver más
+          </Link>
         </div>
 
         {stock <= 0 && (

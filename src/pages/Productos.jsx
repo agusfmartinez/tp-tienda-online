@@ -108,6 +108,7 @@ const Productos = () => {
                 key={producto.id}
               >
                 <ProductCard
+                  id={producto.id}
                   nombre={producto.nombre}
                   precio={producto.precio}
                   agregar={() => agregarAlCarrito(producto)}

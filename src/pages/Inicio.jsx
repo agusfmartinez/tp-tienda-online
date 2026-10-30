@@ -54,6 +54,7 @@ const Inicio = () => {
                     .map((producto) => (
                         <div key={producto.id} className="col-12 col-md-3 pb-3">
                             <ProductCard 
+                                id={producto.id}
                                 nombre={producto.nombre}
                                 precio={producto.precio}
                                 agregar={() => agregarAlCarrito(producto)}
