@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router";
-import {useCarrito} from '../hooks/carritoHook';
+import { useCarrito } from '../hooks/carritoHook';
 
 
 const Carrito = () => {
@@ -21,7 +21,15 @@ const Carrito = () => {
       <div>
         <h1>Acá irá el carrito</h1>
       </div>
-      {carrito.length === 0 ? (<p>Tu carrito está vacío.</p>) :
+      {carrito.length === 0 ? (
+        <div className="text-center py-5">
+          <p>Tu carrito está vacío.</p>
+
+          <Link to="/productos" className="btn btn-primary mt-3">
+            Ver productos
+          </Link>
+        </div>
+      ) :
         (
           <>
             <div className="table-responsive">

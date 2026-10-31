@@ -23,5 +23,11 @@
         "id": 5,
         "categoria": "Higiene",
         "imagen": "https://picsum.photos/200/200?random=13"
+    },
+    {
+        "id": 6,
+        "categoria": "Accesorios",
+        "imagen": "https://picsum.photos/200/200?random=13"
     }
+    
 ]

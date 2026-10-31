@@ -70,9 +70,11 @@ const Inicio = () => {
 
         <section className='container py-5'>
             <h2>Sobre nosotros</h2>
-            <p>Doggy Style es una marca dedicada al Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellat dicta eius sint, rem magnam, obcaecati quod totam nesciunt, similique dolorem sequi minima dolore nam repudiandae a error ipsam enim?
-            Tenetur omnis incidunt quasi at, amet doloribus ab totam aliquam, beatae animi vitae placeat, quae magni. Necessitatibus iste deserunt, enim quis officiis, culpa aperiam debitis dolorem accusantium distinctio cupiditate tempore.
-            Et, inventore! Illum asperiores ea eligendi deleniti libero voluptatem quis quo reprehenderit architecto veritatis atque provident ducimus veniam consequuntur dolorem quod magni, suscipit hic explicabo quas rem dolorum ipsum modi.</p>
+            <p>En <strong>El Doggy Style</strong> somos una tienda dedicada
+            a ofrecer productos para el cuidado, bienestar y diversión
+            de las mascotas. Nuestro objetivo es brindar todo lo necesario
+            para que tus compañeros de cuatro patas tengan una vida feliz
+            y saludable.</p>
         </section>
     </div>
     
