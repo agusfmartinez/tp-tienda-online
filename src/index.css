@@ -2,12 +2,17 @@
 
 :root {
 /* definir clases propias */
-background-color: gainsboro;
+
 }
 
-.hero{
+body{
+  background-color: gainsboro;
+}
+
+.hero {
   min-height: 80vh;
   background-size: cover;
+  background-position: center;
 }
 
 .logoHero {
@@ -16,19 +21,25 @@ background-color: gainsboro;
   height: auto;
 }
 
-.botonesNavBar {
+
+/* .botonesNavBar {
     margin: 2px;
     margin-top: 10px;
     border: 0px;
     padding: 6px;
     text-decoration: none;
     color: black;
-}
+} */
 
-.tituloPagina {
+/* .tituloPagina {
   font-size: clamp();
   max-width: 900px;
   margin-inline: auto;
+} */
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
 }
 
 .celda-eliminar {

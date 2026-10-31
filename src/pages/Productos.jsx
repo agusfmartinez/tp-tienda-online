@@ -104,10 +104,11 @@ const Productos = () => {
 
 
               <div
-                className="col-12 col-md-3 mb-4"
+                className="col-12 col-sm-6 col-lg-3 mb-4"
                 key={producto.id}
               >
                 <ProductCard
+                  id={producto.id}
                   nombre={producto.nombre}
                   precio={producto.precio}
                   agregar={() => agregarAlCarrito(producto)}

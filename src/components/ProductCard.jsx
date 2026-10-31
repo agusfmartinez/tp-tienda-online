@@ -1,6 +1,8 @@
-import React from 'react'
+
+import { Link } from 'react-router'
 
 const ProductCard = ({
+  id,
   nombre,
   precio,
   agregar,
@@ -10,14 +12,14 @@ const ProductCard = ({
   imagen
 }) => {
   return (
-    <div className="card">
+    <div className="card h-100">
       <img
         src={imagen}
         className="card-img-top"
-        alt="..."
+        alt={nombre}
       />
 
-      <div className="card-body">
+      <div className="card-body d-flex flex-column">
         <h5 className="card-title">{nombre}</h5>
 
         <p className="card-text">{descripcion}</p>
@@ -25,7 +27,7 @@ const ProductCard = ({
         <p className="card-text">Precio: ${precio}</p>
         <p className="card-text">Stock: {stock}</p>
 
-         <div className="d-flex gap-2">
+         <div className="d-flex flex-wrap gap-2 mt-auto">
           <button
             className="btn btn-primary"
             onClick={agregar}
@@ -34,9 +36,9 @@ const ProductCard = ({
             Añadir al carrito
           </button>
 
-          <button className="btn btn-secondary">
-            Ver más
-          </button>
+          <Link to={`/producto/${id}`} className='btn btn-secondary'>
+              Ver más
+          </Link>
         </div>
 
         {stock <= 0 && (

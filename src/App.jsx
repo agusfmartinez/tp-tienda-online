@@ -13,6 +13,8 @@ import Productos from "./pages/Productos";
 import IniciarSesion from "./pages/IniciarSesion";
 import FormularioCompra from "./components/FormularioCompra";
 import Footer from "./components/Footer";
+import DetalleProducto from "./pages/DetalleProducto";
+import Contacto from "./pages/Contacto";
 
 
 function App() {
@@ -29,6 +31,9 @@ function App() {
           <Route path="/datosUsuario" element={<DatosUsuario/>}/>
           <Route path="/iniciarSesion" element={<IniciarSesion/>}/>
           <Route path="/formularioCompra" element={<FormularioCompra/>} />
+          <Route path="/contacto" element={<Contacto/>}/>
+
+          <Route path="/producto/:id" element={<DetalleProducto/>}/>
         </Routes>
       <Footer/>
     </main>
