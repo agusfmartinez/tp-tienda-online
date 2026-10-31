@@ -12,7 +12,7 @@ function Footer() {
                     </Col>
                     <Col md={6}>
                         <h5>Contáctanos</h5>
-                        <p>Email: info@eldoggestyle.com</p>
+                        <p>Email: info@eldoggystyle.com</p>
                         <p>Teléfono: 123-456-7890</p>
                     </Col>
                 </Row>
