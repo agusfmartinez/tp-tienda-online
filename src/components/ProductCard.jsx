@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router'
+import { CloseButton } from 'react-bootstrap'
 
 const ProductCard = ({
   id,
@@ -32,6 +33,7 @@ const ProductCard = ({
             className="btn btn-primary"
             onClick={agregar}
             disabled={stock <= 0}
+            id="liveToastBtn"
           >
             Añadir al carrito
           </button>
@@ -40,6 +42,19 @@ const ProductCard = ({
               Ver más
           </Link>
         </div>
+
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <CloseButton dismiss="toast" />
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
 
         {stock <= 0 && (
           <p className="text-danger mt-2">Producto sin stock</p>

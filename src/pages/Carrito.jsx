@@ -46,7 +46,7 @@ const Carrito = () => {
                   {carrito.map((producto) => (
                     <tr key={producto.id}>
                       <td>{producto.nombre}</td>
-                      <td>${producto.precio}</td>
+                      <td>${producto.precio.toLocaleString('es-AR')}</td>
 
                       <td>
                         <button className="btn btn-outline-dark btn-sm me-2"
@@ -64,7 +64,7 @@ const Carrito = () => {
                       </td>
 
                       <td>
-                        ${(producto.precio * producto.cantidad)}
+                        ${(producto.precio * producto.cantidad).toLocaleString('es-AR')}
                       </td>
 
                       <td className="celda-eliminar text-center pe-4">
@@ -85,7 +85,7 @@ const Carrito = () => {
                 Cantidad total de productos: <strong>{cantidadTotal}</strong>
               </p>
 
-              <h3>Total: ${total}</h3>
+              <h3>Total: ${total.toLocaleString('es-AR')}</h3>
 
               <Link
                 to="/formularioCompra"
