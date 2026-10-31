@@ -12,7 +12,7 @@ const Nosotros = () => {
       </div>
 
       <div className="row align-items-center">
-        <div className="col-md-6">
+        <div className="col-12 col-md-6">
           <h2>¿Quiénes somos?</h2>
           <p>
             En <strong>El Doggy Style</strong> somos una tienda dedicada
@@ -29,7 +29,7 @@ const Nosotros = () => {
           </p>
         </div>
 
-        <div className="col-md-6">
+        <div className="col-12 col-md-6">
           <h2>Nuestra misión</h2>
           <p>
             Nuestra misión es facilitar el acceso a productos de calidad
@@ -45,7 +45,7 @@ const Nosotros = () => {
         <h2>¿Por qué elegirnos?</h2>
 
         <div className="row mt-4">
-          <div className="col-md-4 mb-3">
+          <div className="col-12 col-md-4 mb-3">
             <h4>🐶 Variedad</h4>
             <p>
               Diferentes productos para satisfacer las necesidades
@@ -53,14 +53,14 @@ const Nosotros = () => {
             </p>
           </div>
 
-          <div className="col-md-4 mb-3">
+          <div className="col-12 col-md-4 mb-3">
             <h4>❤️ Bienestar</h4>
             <p>
               Nos importa la comodidad, felicidad y cuidado de tus mascotas.
             </p>
           </div>
 
-          <div className="col-md-4 mb-3">
+          <div className="col-12 col-md-4 mb-3">
             <h4>🛒 Fácil compra</h4>
             <p>
               Una tienda online práctica para encontrar lo que necesitás.
