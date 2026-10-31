@@ -33,7 +33,7 @@ const Carrito = () => {
         (
           <>
             <div className="table-responsive">
-              <table className="table table-bordered align-middle">
+              <table className="table table-hover align-middle">
                 <thead>
                   <tr>
                     <th>Producto</th>
@@ -67,7 +67,7 @@ const Carrito = () => {
                         ${(producto.precio * producto.cantidad)}
                       </td>
 
-                      <td>
+                      <td className="celda-eliminar text-center pe-4">
                         <button className="btn btn-danger btn-sm"
                           onClick={() => eliminarProducto(producto.id)}>
                           Eliminar
