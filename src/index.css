@@ -2,11 +2,17 @@
 
 :root {
 /* definir clases propias */
-
+  --fuente-principal: 'Nunito', sans-serif;
+  --fuente-titulos: 'Fredoka', sans-serif;
 }
 
 body{
   background-color: gainsboro;
+  font-family: var(--fuente-principal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulos);
 }
 
 .hero {
@@ -41,4 +47,21 @@ body{
   height: 200px;
   object-fit: cover;
 }
+
+.categoriaImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.categoriaCard {
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.categoriaCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
 
