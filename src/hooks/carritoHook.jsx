@@ -69,8 +69,8 @@ export function useCarrito() {
         { ...producto, cantidad: 1 }
       ];
     }
-
     actualizarCarrito(nuevoCarrito);
+    alert(`¡${producto.nombre} se agregó al carrito!`)
   }
 
   const total = carrito.reduce((suma, item) =>

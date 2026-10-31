@@ -3,31 +3,13 @@ import CategoryCard from '../components/CategoryCard';
 import ProductCard from '../components/ProductCard';
 import {useProductos} from '../hooks/productosHook'
 import {useCategorias} from '../hooks/categoriasHook'
+import {useCarrito} from '../hooks/carritoHook';
 
 const Inicio = () => {
     
     const categorias = useCategorias();
     const productos = useProductos();
-
-    function agregarAlCarrito(producto) {
-        const carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
-        const existente = carrito.find((item) => item.id === producto.id);
-        const cantidadActual = existente ? existente.cantidad : 0;
-
-        if (cantidadActual >= producto.stock) {
-            return;
-        }
-
-        const nuevoCarrito = existente
-            ? carrito.map((item) =>
-                item.id === producto.id
-                    ? { ...item, cantidad: item.cantidad + 1 }
-                    : item
-            )
-            : [...carrito, { ...producto, cantidad: 1 }];
-
-        localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
-    }
+    const { agregarAlCarrito } = useCarrito();
 
   return (
     <div>
