@@ -37,9 +37,10 @@ const Inicio = () => {
             <h2>Categorias</h2>
             <div className='row py-2'>
                 {categorias.map((c) => (
-                    <div key={c.id} className="col-12 col-md-4 pb-3">
-                        <CategoryCard 
+                    <div key={c.id} className="col-6 col-md-4 col-lg-2 pb-3">
+                        <CategoryCard
                             nombre={c.categoria}
+                            imagen={c.imagen}
                         />
                     </div>
                 ))}
