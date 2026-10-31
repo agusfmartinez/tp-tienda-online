@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Logo = ({height = 50, className=''}) => {
   return (
