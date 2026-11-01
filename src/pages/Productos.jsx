@@ -4,12 +4,13 @@ import { useCarrito } from '../hooks/carritoHook';
 import { useProductos } from '../hooks/productosHook';
 import { useSearchParams } from 'react-router';
 import { useCategorias } from '../hooks/categoriasHook';
+import ToastCarrito from '../components/ToastCarrito';
 
 const Productos = () => {
   const [busqueda, setBusqueda] = useState('');
   const [orden, setOrden] = useState('');
   const productos = useProductos()
-  const { agregarAlCarrito } = useCarrito();
+  const { agregarAlCarrito, toast, cerrarToast } = useCarrito();
 
   const [searchParams, setSearchParams] = useSearchParams();
   const categorias = useCategorias()
@@ -124,6 +125,11 @@ const Productos = () => {
           )}
         </div>
       </section>
+        <ToastCarrito
+          show={!!toast}
+          mensaje={toast?.mensaje}
+          onClose={cerrarToast}
+        />
     </main>
   );
 };

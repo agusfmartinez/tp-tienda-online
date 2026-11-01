@@ -4,12 +4,13 @@ import ProductCard from '../components/ProductCard';
 import {useProductos} from '../hooks/productosHook'
 import {useCategorias} from '../hooks/categoriasHook'
 import {useCarrito} from '../hooks/carritoHook';
+import ToastCarrito from '../components/ToastCarrito';
 
 const Inicio = () => {
     
     const categorias = useCategorias();
     const productos = useProductos();
-    const { agregarAlCarrito } = useCarrito();
+    const { agregarAlCarrito, toast, cerrarToast } = useCarrito();
 
   return (
     <div>
@@ -59,8 +60,14 @@ const Inicio = () => {
             para que tus compañeros de cuatro patas tengan una vida feliz
             y saludable.</p>
         </section>
+
+        <ToastCarrito
+          show={!!toast}
+          mensaje={toast?.mensaje}
+          onClose={cerrarToast}
+        />
+
     </div>
-    
   )
 }
 

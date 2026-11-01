@@ -1,11 +1,12 @@
 import { useParams, Link } from 'react-router';
 import { useProductos } from '../hooks/productosHook';
 import { useCarrito } from '../hooks/carritoHook';
+import ToastCarrito from '../components/ToastCarrito';
 
 const DetalleProducto = () => {
   const { id } = useParams();
   const productos = useProductos();
-  const { agregarAlCarrito } = useCarrito();
+  const { agregarAlCarrito, toast, cerrarToast } = useCarrito();
 
   const producto = productos.find((p) => p.id === Number(id));
 
@@ -62,6 +63,13 @@ const DetalleProducto = () => {
           </div>
         </div>
       </div>
+      
+      <ToastCarrito
+          show={!!toast}
+          mensaje={toast?.mensaje}
+          onClose={cerrarToast}
+      />
+
     </main>
   );
 };

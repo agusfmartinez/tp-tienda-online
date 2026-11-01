@@ -5,12 +5,14 @@ export function useCarrito() {
     return JSON.parse(localStorage.getItem("carrito") || "[]");
   });
 
+  const [toast, setToast] = useState(null); 
+
   function actualizarCarrito(nuevoCarrito) {
     setCarrito(nuevoCarrito);
     // Usamos el localStorage para mantenter persistido el carrito
     // y debemos pasarlo a string porque localStorage solo acepta texto
     localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
-  }
+  };
 
   function aumentarCantidad(id) {
     const producto = carrito.find((item) => item.id === id);
@@ -23,7 +25,7 @@ export function useCarrito() {
     );
 
     actualizarCarrito(nuevoCarrito);
-  }
+  };
 
   function disminuirCantidad(id) {
     const nuevoCarrito = carrito.map((item) =>
@@ -32,7 +34,7 @@ export function useCarrito() {
       item.cantidad > 0);
 
     actualizarCarrito(nuevoCarrito);
-  }
+  };
 
   function eliminarProducto(id) {
     const nuevoCarrito = carrito.filter((item) =>
@@ -40,7 +42,7 @@ export function useCarrito() {
     );
 
     actualizarCarrito(nuevoCarrito);
-  }
+  };
 
   function agregarAlCarrito(producto) {
     const existente = carrito.find(
@@ -52,7 +54,8 @@ export function useCarrito() {
       : 0;
 
     if (cantidadActual >= producto.stock) {
-      return;
+      setToast({ mensaje: 'No hay más stock disponible.' });
+      return 
     }
 
     let nuevoCarrito;
@@ -70,8 +73,12 @@ export function useCarrito() {
       ];
     }
     actualizarCarrito(nuevoCarrito);
-    alert(`¡${producto.nombre} se agregó al carrito!`)
-  }
+    setToast({ mensaje: `¡${producto.nombre} se agregó al carrito!` })
+  };
+
+  function cerrarToast() {
+    setToast(null)
+  };
 
   const total = carrito.reduce((suma, item) =>
     suma + item.precio * item.cantidad, 0
@@ -89,6 +96,8 @@ export function useCarrito() {
     eliminarProducto,
     total,
     cantidadTotal,
+    toast,
+    cerrarToast,
   };
 }
 
