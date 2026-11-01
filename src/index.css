@@ -56,12 +56,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .categoriaCard {
   color: inherit;
+}
+
+.categoriaCard,
+.productoCard {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.categoriaCard:hover {
+.categoriaCard:hover,
+.productoCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tituloProducto {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tituloProducto:hover {
+  text-decoration: underline;
 }
 
 

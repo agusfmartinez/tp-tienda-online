@@ -13,15 +13,21 @@ const ProductCard = ({
   imagen
 }) => {
   return (
-    <div className="card h-100">
-      <img
-        src={imagen}
-        className="card-img-top"
-        alt={nombre}
-      />
+    <div className="card h-100 productoCard">
+      <Link to={`/producto/${id}`}>
+        <img
+          src={imagen}
+          className="card-img-top"
+          alt={nombre}
+        />
+      </Link>
 
       <div className="card-body d-flex flex-column">
-        <h5 className="card-title">{nombre}</h5>
+        <h5 className="card-title">
+          <Link to={`/producto/${id}`} className="tituloProducto">
+            {nombre}
+          </Link>
+        </h5>
 
         <p className="card-text">{descripcion}</p>
         <p className="card-text">Categoría: {categoria}</p>
