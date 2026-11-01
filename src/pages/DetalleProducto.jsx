@@ -1,12 +1,11 @@
 import { useParams, Link } from 'react-router';
 import { useProductos } from '../hooks/productosHook';
-import { useCarrito } from '../hooks/carritoHook';
 import ToastCarrito from '../components/ToastCarrito';
 
-const DetalleProducto = () => {
+const DetalleProducto = ({ agregarAlCarrito, toast, cerrarToast }) => {
   const { id } = useParams();
   const productos = useProductos();
-  const { agregarAlCarrito, toast, cerrarToast } = useCarrito();
+ 
 
   const producto = productos.find((p) => p.id === Number(id));
 

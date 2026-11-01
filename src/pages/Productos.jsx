@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import ProductCard from '../components/ProductCard';
-import { useCarrito } from '../hooks/carritoHook';
 import { useProductos } from '../hooks/productosHook';
 import { useSearchParams } from 'react-router';
 import { useCategorias } from '../hooks/categoriasHook';
 import ToastCarrito from '../components/ToastCarrito';
 
-const Productos = () => {
+const Productos = ({ agregarAlCarrito, toast, cerrarToast }) => {
   const [busqueda, setBusqueda] = useState('');
   const [orden, setOrden] = useState('');
   const productos = useProductos()
-  const { agregarAlCarrito, toast, cerrarToast } = useCarrito();
 
   const [searchParams, setSearchParams] = useSearchParams();
   const categorias = useCategorias()

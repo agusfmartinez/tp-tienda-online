@@ -1,17 +1,15 @@
 import { useState } from "react";
 
-function FormularioCompra() {
+function FormularioCompra({ carrito, total, vaciarCarrito }) {
+
   const [formulario, setFormulario] = useState({
+
     nombre: "",
     email: "",
     telefono: "",
     direccion: "",
     entrega: "",
     mensaje: "",
-  });
-
-  const [carrito, setCarrito] = useState(() => {
-    return JSON.parse(localStorage.getItem("carrito") || "[]");
   });
 
   const handleChange = (e) => {
@@ -24,24 +22,18 @@ function FormularioCompra() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const carritoActualizado = JSON.parse(
-      localStorage.getItem("carrito") || "[]"
-    );
-
-    if (carritoActualizado.length === 0) {
-      setCarrito([]);
+    if (carrito.length === 0) {
       alert("No podés confirmar una compra con el carrito vacío.");
       return;
     }
 
     console.log("Datos del cliente:", formulario);
-    console.log("Productos comprados:", carritoActualizado);
+    console.log("Productos comprados:", carrito);
+    console.log("Total de la compra:", total);
 
-   
-    localStorage.setItem("carrito", JSON.stringify([]));
-    setCarrito([]);
+    // Vaciamos el carrito compartido
+    vaciarCarrito();
 
-   
     setFormulario({
       nombre: "",
       email: "",
@@ -66,12 +58,7 @@ function FormularioCompra() {
         <div className="alert alert-info">
           Tenés {carrito.reduce((total, producto) => total + producto.cantidad, 0)} producto(s) en tu carrito.
           <br />
-          Total de la compra: $
-          {carrito.reduce(
-            (total, producto) =>
-              total + producto.precio * producto.cantidad,
-            0
-          )}
+          Total de la compra: ${total.toLocaleString("es-AR")}
         </div>
       )}
 

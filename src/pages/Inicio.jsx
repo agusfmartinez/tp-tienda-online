@@ -3,15 +3,13 @@ import CategoryCard from '../components/CategoryCard';
 import ProductCard from '../components/ProductCard';
 import {useProductos} from '../hooks/productosHook'
 import {useCategorias} from '../hooks/categoriasHook'
-import {useCarrito} from '../hooks/carritoHook';
+
 import ToastCarrito from '../components/ToastCarrito';
 
-const Inicio = () => {
-    
+const Inicio = ({ agregarAlCarrito, toast, cerrarToast }) => {
+
     const categorias = useCategorias();
     const productos = useProductos();
-    const { agregarAlCarrito, toast, cerrarToast } = useCarrito();
-
   return (
     <div>
         <Hero/>

@@ -76,6 +76,10 @@ export function useCarrito() {
     setToast({ mensaje: `¡${producto.nombre} se agregó al carrito!`, tipo: 'success' })
   };
 
+   function vaciarCarrito() {
+    actualizarCarrito([]);
+  }
+
   function cerrarToast() {
     setToast(null)
   };
@@ -88,17 +92,18 @@ export function useCarrito() {
     suma + item.cantidad, 0
   );
 
-  return {
-    carrito,
-    agregarAlCarrito,
-    aumentarCantidad,
-    disminuirCantidad,
-    eliminarProducto,
-    total,
-    cantidadTotal,
-    toast,
-    cerrarToast,
-  };
+return {
+  carrito,
+  agregarAlCarrito,
+  aumentarCantidad,
+  disminuirCantidad,
+  eliminarProducto,
+  vaciarCarrito,
+  total,
+  cantidadTotal,
+  toast,
+  cerrarToast
+};
 }
 
 export default useCarrito;

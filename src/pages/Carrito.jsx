@@ -1,26 +1,22 @@
 
 import { Link } from "react-router";
-import { useCarrito } from '../hooks/carritoHook';
 
 
-const Carrito = () => {
-
-  const {
+const Carrito = ({
     carrito,
     aumentarCantidad,
     disminuirCantidad,
     eliminarProducto,
     total,
-    cantidadTotal,
-  } = useCarrito();
+    cantidadTotal
+}) => {
 
   return (
-    // En la parte del "Eliminar" quiero dejar el boton por fuera de la tabla,
-    // Resta reorganizar las columnas
     <main className="container py-5">
       <div>
-        <h1>Acá irá el carrito</h1>
+        <h1>Tu Carrito</h1>
       </div>
+
       {carrito.length === 0 ? (
         <div className="text-center py-5">
           <p>Tu carrito está vacío.</p>
@@ -29,74 +25,84 @@ const Carrito = () => {
             Ver productos
           </Link>
         </div>
-      ) :
-        (
-          <>
-            <div className="table-responsive">
-              <table className="table table-hover align-middle">
-                <thead>
-                  <tr>
-                    <th>Producto</th>
-                    <th>Precio unitario</th>
-                    <th>Cantidad</th>
-                    <th>Subtotal</th>
+      ) : (
+        <>
+          <div className="table-responsive">
+            <table className="table table-hover align-middle">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Precio unitario</th>
+                  <th>Cantidad</th>
+                  <th>Subtotal</th>
+                  <th>Eliminar</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {carrito.map((producto) => (
+                  <tr key={producto.id}>
+                    <td>{producto.nombre}</td>
+
+                    <td>
+                      ${producto.precio.toLocaleString('es-AR')}
+                    </td>
+
+                    <td>
+                      <button
+                        className="btn btn-outline-dark btn-sm me-2"
+                        onClick={() => disminuirCantidad(producto.id)}
+                      >
+                        −
+                      </button>
+
+                      {producto.cantidad}
+
+                      <button
+                        className="btn btn-outline-dark btn-sm ms-2"
+                        onClick={() => aumentarCantidad(producto.id)}
+                        disabled={producto.cantidad >= producto.stock}
+                      >
+                        +
+                      </button>
+                    </td>
+
+                    <td>
+                      ${(producto.precio * producto.cantidad).toLocaleString('es-AR')}
+                    </td>
+
+                    <td className="celda-eliminar text-center pe-4">
+                      <button
+                        className="btn btn-danger btn-sm"
+                        onClick={() => eliminarProducto(producto.id)}
+                      >
+                        Eliminar
+                      </button>
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
-                  {carrito.map((producto) => (
-                    <tr key={producto.id}>
-                      <td>{producto.nombre}</td>
-                      <td>${producto.precio.toLocaleString('es-AR')}</td>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
-                      <td>
-                        <button className="btn btn-outline-dark btn-sm me-2"
-                          onClick={() => disminuirCantidad(producto.id)}>
-                          −
-                        </button>
+          <div className="d-flex justify-content-between align-items-center mt-4">
 
-                        {producto.cantidad}
+            <p>
+              Cantidad total de productos: <strong>{cantidadTotal}</strong>
+            </p>
 
-                        <button className="btn btn-outline-dark btn-sm ms-2"
-                          onClick={() => aumentarCantidad(producto.id)}
-                          disabled={producto.cantidad >= producto.stock}>
-                          +
-                        </button>
-                      </td>
+            <h3>Total: ${total.toLocaleString('es-AR')}</h3>
 
-                      <td>
-                        ${(producto.precio * producto.cantidad).toLocaleString('es-AR')}
-                      </td>
+            <Link
+              to="/formularioCompra"
+              className="btn btn-success"
+            >
+              Finalizar compra
+            </Link>
 
-                      <td className="celda-eliminar text-center pe-4">
-                        <button className="btn btn-danger btn-sm"
-                          onClick={() => eliminarProducto(producto.id)}>
-                          Eliminar
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="d-flex justify-content-between align-items-center mt-4">
-
-              <p>
-                Cantidad total de productos: <strong>{cantidadTotal}</strong>
-              </p>
-
-              <h3>Total: ${total.toLocaleString('es-AR')}</h3>
-
-              <Link
-                to="/formularioCompra"
-                className="btn btn-success"
-              >
-                Finalizar compra
-              </Link>
-            </div>
-          </>
-        )
-      }
+          </div>
+        </>
+      )}
     </main>
   );
 }
