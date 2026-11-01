@@ -2,7 +2,7 @@ import NavBar from "./NavBar";
 
 
 function Header() {
-    return <header>
+    return <header className="sticky-top">
         <NavBar/>
     </header>
 };
