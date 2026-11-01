@@ -1,9 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import Logo from './Logo';
-import '../index.css';
 
 function AppNavBar() {
   return (
@@ -15,11 +14,11 @@ function AppNavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav as={Link} to="/" className='botonesNavBar'>Inicio</Nav>
-            <Nav as={Link} to="/productos" className='botonesNavBar'>Productos</Nav>
-            <Nav as={Link} to="/carrito" className='botonesNavBar'>Carrito</Nav>
-            <Nav as={Link} to="/nosotros" className='botonesNavBar'>Nosotros</Nav>
-            <Nav as={Link} to="/contacto" className='botonesNavBar'>Contacto</Nav>
+            <Nav.Link as={NavLink} to="/" end>Inicio</Nav.Link>
+            <Nav.Link as={NavLink} to="/productos">Productos</Nav.Link>
+            <Nav.Link as={NavLink} to="/carrito">Carrito</Nav.Link>
+            <Nav.Link as={NavLink} to="/nosotros">Nosotros</Nav.Link>
+            <Nav.Link as={NavLink} to="/contacto">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
