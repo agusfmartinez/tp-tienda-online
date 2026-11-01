@@ -54,7 +54,7 @@ export function useCarrito() {
       : 0;
 
     if (cantidadActual >= producto.stock) {
-      setToast({ mensaje: 'No hay más stock disponible.' });
+      setToast({ mensaje: 'No hay más stock disponible.', tipo: 'danger' });
       return 
     }
 
@@ -73,7 +73,7 @@ export function useCarrito() {
       ];
     }
     actualizarCarrito(nuevoCarrito);
-    setToast({ mensaje: `¡${producto.nombre} se agregó al carrito!` })
+    setToast({ mensaje: `¡${producto.nombre} se agregó al carrito!`, tipo: 'success' })
   };
 
   function cerrarToast() {

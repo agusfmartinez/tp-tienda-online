@@ -64,6 +64,7 @@ const Inicio = () => {
         <ToastCarrito
           show={!!toast}
           mensaje={toast?.mensaje}
+          tipo={toast?.tipo}
           onClose={cerrarToast}
         />
 

@@ -67,6 +67,7 @@ const DetalleProducto = () => {
       <ToastCarrito
           show={!!toast}
           mensaje={toast?.mensaje}
+          tipo={toast?.tipo}
           onClose={cerrarToast}
       />
 

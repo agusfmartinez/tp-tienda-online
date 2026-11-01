@@ -92,3 +92,8 @@ header.sticky-top {
   color: var(--color-primario);
 }
 
+
+.toast-carrito {
+  margin-top: 4rem;
+  padding: 1rem;
+}
