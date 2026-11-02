@@ -9,7 +9,7 @@ const Inicio = ({ agregarAlCarrito}) => {
     const categorias = useCategorias();
     const productos = useProductos();
   return (
-    <div>
+    <>
         <Hero/>
 
         <section className='container py-5'>
@@ -56,7 +56,7 @@ const Inicio = ({ agregarAlCarrito}) => {
             para que tus compañeros de cuatro patas tengan una vida feliz
             y saludable.</p>
         </section>
-    </div>
+    </>
   )
 }
 

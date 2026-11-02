@@ -9,20 +9,20 @@ const DetalleProducto = ({ agregarAlCarrito}) => {
   const producto = productos.find((p) => p.id === Number(id));
 
   if (productos.length === 0) {
-    return <main className="container py-5"><p>Cargando...</p></main>;
+    return <div className="container py-5"><p>Cargando...</p></div>;
   }
 
   if (!producto) {
     return (
-      <main className="container py-5">
+      <div className="container py-5">
         <p>Producto no encontrado.</p>
         <Link to="/productos" className="btn btn-secondary">Volver al catálogo</Link>
-      </main>
+      </div>
     );
   }
 
   return (
-    <main className="container py-5">
+    <div className="container py-5">
       <div className="row g-4">
         <div className="col-12 col-md-6">
           <img src={producto.imagen} alt={producto.nombre} className="img-fluid rounded" />
@@ -61,7 +61,7 @@ const DetalleProducto = ({ agregarAlCarrito}) => {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

@@ -1,6 +1,5 @@
 /* Componente principal de la app */
 
-
 //import styles from "./App.module.css";
 import { Routes, Route } from "react-router";
 import Header from "./components/Header";
@@ -16,8 +15,7 @@ import { useCarrito } from "./hooks/carritoHook";
 import ToastCarrito from "./components/ToastCarrito";
 
 function App() {
-
-  // Este seria el carrito que se crea solo una veez
+  // Este seria el carrito que se crea solo una vez
   const {
     carrito,
     agregarAlCarrito,
@@ -28,47 +26,67 @@ function App() {
     total,
     cantidadTotal,
     toast,
-    cerrarToast
+    cerrarToast,
   } = useCarrito();
 
   return (
-    <main>
+    <>
       <Header cantidadTotal={cantidadTotal} />
-      <ToastCarrito 
+      <ToastCarrito
         show={!!toast}
         mensaje={toast?.mensaje}
         tipo={toast?.tipo}
         onClose={cerrarToast}
       />
-      <Routes>
-        <Route path="/" element={<Inicio agregarAlCarrito={agregarAlCarrito} />} />
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={<Inicio agregarAlCarrito={agregarAlCarrito} />}
+          />
 
-        <Route path="/productos" element={<Productos agregarAlCarrito={agregarAlCarrito} />} />
+          <Route
+            path="/productos"
+            element={<Productos agregarAlCarrito={agregarAlCarrito} />}
+          />
 
-        <Route path="/carrito" 
-          element={<Carrito
-            carrito={carrito}
-            aumentarCantidad={aumentarCantidad}
-            disminuirCantidad={disminuirCantidad}
-            eliminarProducto={eliminarProducto}
-            total={total}
-            cantidadTotal={cantidadTotal}
-          />} 
-        />
+          <Route
+            path="/carrito"
+            element={
+              <Carrito
+                carrito={carrito}
+                aumentarCantidad={aumentarCantidad}
+                disminuirCantidad={disminuirCantidad}
+                eliminarProducto={eliminarProducto}
+                total={total}
+                cantidadTotal={cantidadTotal}
+              />
+            }
+          />
 
-        <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/nosotros" element={<Nosotros />} />
 
-        <Route path="/formularioCompra" element={<FormularioCompra
-          carrito={carrito}
-          total={total}
-          vaciarCarrito={vaciarCarrito} />} />
+          <Route
+            path="/formularioCompra"
+            element={
+              <FormularioCompra
+                carrito={carrito}
+                total={total}
+                vaciarCarrito={vaciarCarrito}
+              />
+            }
+          />
 
-        <Route path="/contacto" element={<Contacto />} />
+          <Route path="/contacto" element={<Contacto />} />
 
-        <Route path="/producto/:id" element={<DetalleProducto agregarAlCarrito={agregarAlCarrito} />} />
-      </Routes>
+          <Route
+            path="/producto/:id"
+            element={<DetalleProducto agregarAlCarrito={agregarAlCarrito} />}
+          />
+        </Routes>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 

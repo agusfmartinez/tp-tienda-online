@@ -10,7 +10,7 @@ const Carrito = ({
 }) => {
 
   return (
-    <main className="container py-5">
+    <div className="container py-5">
       <div>
         <h1>Tu Carrito</h1>
       </div>
@@ -101,7 +101,7 @@ const Carrito = ({
           </div>
         </>
       )}
-    </main>
+    </div>
   );
 }
 

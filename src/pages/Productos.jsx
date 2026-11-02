@@ -50,79 +50,77 @@ const Productos = ({ agregarAlCarrito}) => {
     }
   }
   return (
-    <main>
-      <section className="container py-5">
-        <h2>Productos</h2>
+    <div className="container py-5">
+      <h2>Productos</h2>
 
 
-        <div className="row py-3">
-          <div className="col-12 col-md-4 mb-3">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Buscar por nombre..."
-              value={busqueda}
-              onChange={(e) => setBusqueda(e.target.value)}
-            />
-          </div>
+      <div className="row py-3">
+        <div className="col-12 col-md-4 mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Buscar por nombre..."
+            value={busqueda}
+            onChange={(e) => setBusqueda(e.target.value)}
+          />
+        </div>
 
-          <div className="col-12 col-md-4 mb-3">
+        <div className="col-12 col-md-4 mb-3">
+          <select
+            className="form-select"
+            value={categoriaFiltro || ''}
+            onChange={cambiarCategoria}
+          >
+            <option value="">Todas las categorias</option>
+            {categorias.map((c) => (
+              <option key={c.id} value={c.categoria}>{c.categoria}</option>
+            ))}
+          </select>
+        </div>
+
+        <div className="col-12 col-md-4 mb-3">
             <select
               className="form-select"
-              value={categoriaFiltro || ''}
-              onChange={cambiarCategoria}
+              value={orden}
+              onChange={(e) => setOrden(e.target.value)}
             >
-              <option value="">Todas las categorias</option>
-              {categorias.map((c) => (
-                <option key={c.id} value={c.categoria}>{c.categoria}</option>
-              ))}
-            </select>
-          </div>
+            <option value="">Ordenar por...</option>
+            <option value="az">Nombre: A-Z</option>
+            <option value="za">Nombre: Z-A</option>
+            <option value="menor">Precio: menor a mayor</option>
+            <option value="mayor">Precio: mayor a menor</option>
 
-          <div className="col-12 col-md-4 mb-3">
-              <select
-                className="form-select"
-                value={orden}
-                onChange={(e) => setOrden(e.target.value)}
-              >
-              <option value="">Ordenar por...</option>
-              <option value="az">Nombre: A-Z</option>
-              <option value="za">Nombre: Z-A</option>
-              <option value="menor">Precio: menor a mayor</option>
-              <option value="mayor">Precio: mayor a menor</option>
-
-            </select>
-          </div>
+          </select>
         </div>
+      </div>
 
 
-        <div className="row py-2">
-          {productosFiltrados.length > 0 ? (
-            productosFiltrados.map((producto) => (
+      <div className="row py-2">
+        {productosFiltrados.length > 0 ? (
+          productosFiltrados.map((producto) => (
 
 
-              <div
-                className="col-12 col-sm-6 col-lg-3 mb-4"
-                key={producto.id}
-              >
-                <ProductCard
-                  id={producto.id}
-                  nombre={producto.nombre}
-                  precio={producto.precio.toLocaleString('es-AR')}
-                  agregar={() => agregarAlCarrito(producto)}
-                  categoria={producto.categoria}
-                  descripcion={producto.descripcion}
-                  stock={producto.stock}
-                  imagen={producto.imagen}
-                />
-              </div>
-            ))
-          ) : (
-            <p>No se encontraron productos.</p>
-          )}
-        </div>
-      </section>
-    </main>
+            <div
+              className="col-12 col-sm-6 col-lg-3 mb-4"
+              key={producto.id}
+            >
+              <ProductCard
+                id={producto.id}
+                nombre={producto.nombre}
+                precio={producto.precio.toLocaleString('es-AR')}
+                agregar={() => agregarAlCarrito(producto)}
+                categoria={producto.categoria}
+                descripcion={producto.descripcion}
+                stock={producto.stock}
+                imagen={producto.imagen}
+              />
+            </div>
+          ))
+        ) : (
+          <p>No se encontraron productos.</p>
+        )}
+      </div>
+    </div>
   );
 };
 

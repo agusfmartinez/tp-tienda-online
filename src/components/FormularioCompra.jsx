@@ -47,7 +47,7 @@ function FormularioCompra({ carrito, total, vaciarCarrito }) {
   };
 
   return (
-    <main className="container my-5">
+    <div className="container my-5">
       <h2>Formulario de compra</h2>
 
       {carrito.length === 0 ? (
@@ -163,7 +163,7 @@ function FormularioCompra({ carrito, total, vaciarCarrito }) {
           Confirmar compra
         </button>
       </form>
-    </main>
+    </div>
   );
 }
 
