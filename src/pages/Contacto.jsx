@@ -46,7 +46,7 @@ const Contacto = () => {
   }
 
   return (
-    <main className="container py-5">
+    <div className="container py-5">
       <div className="row g-5">
         <div className="col-12 col-md-5">
           <h2>Contacto</h2>
@@ -107,7 +107,7 @@ const Contacto = () => {
           </form>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

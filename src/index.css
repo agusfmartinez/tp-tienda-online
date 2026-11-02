@@ -6,6 +6,16 @@
   --fuente-titulos: 'Fredoka', sans-serif;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root > main {
+  flex: 1;
+}
+
 body{
   background: linear-gradient(90deg in oklch, oklch(92.13% 0.0152 74.53) 0.0%, oklch(91.95% 0.0178 69.87) 16.7%, oklch(90.03% 0.0208 64.55) 33.3%, oklch(86.22% 0.0234 59.74) 50.0%, oklch(81.57% 0.0244 56.41) 66.7%, oklch(76.51% 0.0253 55.51) 83.3%, oklch(72.05% 0.0262 56.57) 100.0%);
   font-family: var(--fuente-principal);
@@ -30,22 +40,6 @@ header.sticky-top {
   max-width: 300px;
   height: auto;
 }
-
-
-.botonesNavBar {
-    margin: 2px;
-    margin-top: 10px;
-    border: 0px;
-    padding: 6px;
-    text-decoration: none;
-    color: black;
-}
-
-/* .tituloPagina {
-  font-size: clamp();
-  max-width: 900px;
-  margin-inline: auto;
-} */
 
 .card-img-top {
   height: 200px;
