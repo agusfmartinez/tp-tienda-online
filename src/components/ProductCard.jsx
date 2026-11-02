@@ -29,10 +29,10 @@ const ProductCard = ({
 
         <p className="card-text">{descripcion}</p>
         <p className="card-text">Categoría: {categoria}</p>
-        <p className="card-text">Precio: ${precio}</p>
+        <p className="card-text"> Precio: ${precio.toLocaleString('es-AR')}</p>
         <p className="card-text">Stock: {stock}</p>
 
-         <div className="d-flex flex-wrap gap-2 mt-auto">
+        <div className="d-flex flex-wrap gap-2 mt-auto">
           <button
             className="btn btn-primary"
             onClick={agregar}
@@ -42,7 +42,7 @@ const ProductCard = ({
           </button>
 
           <Link to={`/producto/${id}`} className='btn btn-secondary'>
-              Ver más
+            Ver más
           </Link>
         </div>
 
