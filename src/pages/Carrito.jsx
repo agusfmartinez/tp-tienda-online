@@ -25,28 +25,27 @@ const Carrito = ({
         </div>
       ) : (
         <>
-          <div className="table-responsive">
+          <div className="table-responsive tabla-carrito">
             <table className="table table-hover align-middle">
               <thead>
                 <tr>
-                  <th>Producto</th>
-                  <th>Precio unitario</th>
-                  <th>Cantidad</th>
-                  <th>Subtotal</th>
-                  <th>Eliminar</th>
+                  <th className="celda-eliminar">Producto</th>
+                  <th className="celda-eliminar">Precio unitario</th>
+                  <th className="celda-eliminar">Cantidad</th>
+                  <th className="celda-eliminar">Subtotal</th>
                 </tr>
               </thead>
 
               <tbody>
                 {carrito.map((producto) => (
                   <tr key={producto.id}>
-                    <td>{producto.nombre}</td>
+                    <td className="celda-eliminar">{producto.nombre}</td>
 
-                    <td>
+                    <td className="celda-eliminar">
                       ${producto.precio.toLocaleString('es-AR')}
                     </td>
 
-                    <td>
+                    <td className="celda-eliminar">
                       <button
                         className="btn btn-outline-dark btn-sm me-2"
                         onClick={() => disminuirCantidad(producto.id)}
@@ -65,7 +64,7 @@ const Carrito = ({
                       </button>
                     </td>
 
-                    <td>
+                    <td className="celda-eliminar">
                       ${(producto.precio * producto.cantidad).toLocaleString('es-AR')}
                     </td>
 

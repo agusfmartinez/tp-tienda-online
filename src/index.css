@@ -7,7 +7,7 @@
 }
 
 body{
-  background-color: gainsboro;
+  background: linear-gradient(90deg in oklch, oklch(92.13% 0.0152 74.53) 0.0%, oklch(91.95% 0.0178 69.87) 16.7%, oklch(90.03% 0.0208 64.55) 33.3%, oklch(86.22% 0.0234 59.74) 50.0%, oklch(81.57% 0.0244 56.41) 66.7%, oklch(76.51% 0.0253 55.51) 83.3%, oklch(72.05% 0.0262 56.57) 100.0%);
   font-family: var(--fuente-principal);
 }
 
@@ -92,8 +92,24 @@ header.sticky-top {
   color: var(--color-primario);
 }
 
-
 .toast-carrito {
   margin-top: 4rem;
   padding: 1rem;
 }
+
+.tabla-carrito {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--bs-border-color);
+}
+
+.tabla-carrito .table {
+  --bs-table-bg: linear-gradient(135deg in oklch, oklch(53.54% 0.0165 218.67) 0.0%, oklch(56.10% 0.0166 217.79) 3.2%, oklch(59.73% 0.0168 216.59) 6.5%, oklch(63.95% 0.0169 215.13) 9.7%, oklch(68.28% 0.0169 213.45) 12.9%, oklch(72.24% 0.0166 211.60) 16.1%, oklch(75.74% 0.0160 209.51) 19.4%, oklch(79.23% 0.0150 207.08) 22.6%, oklch(82.59% 0.0138 204.47) 25.8%, oklch(85.73% 0.0126 201.85) 29.0%, oklch(88.53% 0.0114 199.36) 32.3%, oklch(90.96% 0.0102 196.94) 35.5%, oklch(93.18% 0.0085 194.13) 38.7%, oklch(95.10% 0.0068 191.38) 41.9%, oklch(96.64% 0.0055 189.18) 45.2%, oklch(97.71% 0.0052 188.04) 48.4%, oklch(98.20% 0.0062 188.51) 51.6%, oklch(98.12% 0.0087 190.81) 54.8%, oklch(97.56% 0.0121 194.25) 58.1%, oklch(96.62% 0.0159 198.01) 61.3%, oklch(95.40% 0.0198 201.30) 64.5%, oklch(94.02% 0.0232 203.34) 67.7%, oklch(92.53% 0.0271 204.36) 71.0%, oklch(90.83% 0.0314 204.81) 74.2%, oklch(88.76% 0.0352 205.03) 77.4%, oklch(86.15% 0.0378 205.37) 80.6%, oklch(82.85% 0.0385 206.17) 83.9%, oklch(78.17% 0.0368 207.52) 87.1%, oklch(72.46% 0.0331 209.17) 90.3%, oklch(66.59% 0.0288 210.87) 93.5%, oklch(61.44% 0.0247 212.36) 96.8%, oklch(57.87% 0.0220 213.39) 100.0%);
+  --bs-table-color: #5c1a1a;
+  --bs-table-border-color: #637074;
+  --bs-table-hover-bg: #a9c9ce;
+;
+  margin-bottom: 0;
+}
+
+
