@@ -6,10 +6,8 @@ import { Routes, Route } from "react-router";
 import Header from "./components/Header";
 import Inicio from "./pages/Inicio";
 import Carrito from "./pages/Carrito";
-import DatosUsuario from "./pages/DatosUsuario";
 import Nosotros from "./pages/Nosotros";
 import Productos from "./pages/Productos";
-import IniciarSesion from "./pages/IniciarSesion";
 import FormularioCompra from "./components/FormularioCompra";
 import Footer from "./components/Footer";
 import DetalleProducto from "./pages/DetalleProducto";
@@ -59,10 +57,6 @@ function App() {
         />
 
         <Route path="/nosotros" element={<Nosotros />} />
-
-        <Route path="/datosUsuario" element={<DatosUsuario />} />
-
-        <Route path="/iniciarSesion" element={<IniciarSesion />} />
 
         <Route path="/formularioCompra" element={<FormularioCompra
           carrito={carrito}
