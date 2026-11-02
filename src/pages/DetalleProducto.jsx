@@ -1,8 +1,7 @@
 import { useParams, Link } from 'react-router';
 import { useProductos } from '../hooks/productosHook';
-import ToastCarrito from '../components/ToastCarrito';
 
-const DetalleProducto = ({ agregarAlCarrito, toast, cerrarToast }) => {
+const DetalleProducto = ({ agregarAlCarrito}) => {
   const { id } = useParams();
   const productos = useProductos();
  
@@ -62,14 +61,6 @@ const DetalleProducto = ({ agregarAlCarrito, toast, cerrarToast }) => {
           </div>
         </div>
       </div>
-      
-      <ToastCarrito
-          show={!!toast}
-          mensaje={toast?.mensaje}
-          tipo={toast?.tipo}
-          onClose={cerrarToast}
-      />
-
     </main>
   );
 };

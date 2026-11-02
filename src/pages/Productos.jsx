@@ -3,9 +3,8 @@ import ProductCard from '../components/ProductCard';
 import { useProductos } from '../hooks/productosHook';
 import { useSearchParams } from 'react-router';
 import { useCategorias } from '../hooks/categoriasHook';
-import ToastCarrito from '../components/ToastCarrito';
 
-const Productos = ({ agregarAlCarrito, toast, cerrarToast }) => {
+const Productos = ({ agregarAlCarrito}) => {
   const [busqueda, setBusqueda] = useState('');
   const [orden, setOrden] = useState('');
   const productos = useProductos()
@@ -123,12 +122,6 @@ const Productos = ({ agregarAlCarrito, toast, cerrarToast }) => {
           )}
         </div>
       </section>
-        <ToastCarrito
-          show={!!toast}
-          mensaje={toast?.mensaje}
-          tipo={toast?.tipo}
-          onClose={cerrarToast}
-        />
     </main>
   );
 };
