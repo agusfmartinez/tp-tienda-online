@@ -4,9 +4,7 @@ import ProductCard from '../components/ProductCard';
 import {useProductos} from '../hooks/productosHook'
 import {useCategorias} from '../hooks/categoriasHook'
 
-import ToastCarrito from '../components/ToastCarrito';
-
-const Inicio = ({ agregarAlCarrito, toast, cerrarToast }) => {
+const Inicio = ({ agregarAlCarrito}) => {
 
     const categorias = useCategorias();
     const productos = useProductos();
@@ -58,14 +56,6 @@ const Inicio = ({ agregarAlCarrito, toast, cerrarToast }) => {
             para que tus compañeros de cuatro patas tengan una vida feliz
             y saludable.</p>
         </section>
-
-        <ToastCarrito
-          show={!!toast}
-          mensaje={toast?.mensaje}
-          tipo={toast?.tipo}
-          onClose={cerrarToast}
-        />
-
     </div>
   )
 }

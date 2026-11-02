@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import DetalleProducto from "./pages/DetalleProducto";
 import Contacto from "./pages/Contacto";
 import { useCarrito } from "./hooks/carritoHook";
+import ToastCarrito from "./components/ToastCarrito";
 
 function App() {
 
@@ -35,20 +36,27 @@ function App() {
   return (
     <main>
       <Header cantidadTotal={cantidadTotal} />
+      <ToastCarrito 
+        show={!!toast}
+        mensaje={toast?.mensaje}
+        tipo={toast?.tipo}
+        onClose={cerrarToast}
+      />
       <Routes>
         <Route path="/" element={<Inicio agregarAlCarrito={agregarAlCarrito} />} />
 
         <Route path="/productos" element={<Productos agregarAlCarrito={agregarAlCarrito} />} />
 
-        <Route path="/carrito" element={<Carrito
-          carrito={carrito}
-          aumentarCantidad={aumentarCantidad}
-          disminuirCantidad={disminuirCantidad}
-          eliminarProducto={eliminarProducto}
-          total={total}
-          cantidadTotal={cantidadTotal}
-          toast={toast}
-          cerrarToast={cerrarToast} />} />
+        <Route path="/carrito" 
+          element={<Carrito
+            carrito={carrito}
+            aumentarCantidad={aumentarCantidad}
+            disminuirCantidad={disminuirCantidad}
+            eliminarProducto={eliminarProducto}
+            total={total}
+            cantidadTotal={cantidadTotal}
+          />} 
+        />
 
         <Route path="/nosotros" element={<Nosotros />} />
 
