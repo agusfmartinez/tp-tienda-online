@@ -1,12 +1,13 @@
 import { Link } from "react-router";
 
 const Carrito = ({
-    carrito,
-    aumentarCantidad,
-    disminuirCantidad,
-    eliminarProducto,
-    total,
-    cantidadTotal
+  carrito,
+  aumentarCantidad,
+  disminuirCantidad,
+  eliminarProducto,
+  vaciarCarrito,
+  total,
+  cantidadTotal
 }) => {
 
   return (
@@ -89,7 +90,12 @@ const Carrito = ({
             </p>
 
             <h3>Total: ${total.toLocaleString('es-AR')}</h3>
-
+            <button
+              className="btn btn-danger"
+              onClick={vaciarCarrito}
+            >
+              Vaciar carrito
+            </button>
             <Link
               to="/formularioCompra"
               className="btn btn-success"

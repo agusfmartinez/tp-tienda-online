@@ -56,6 +56,7 @@ function App() {
                 aumentarCantidad={aumentarCantidad}
                 disminuirCantidad={disminuirCantidad}
                 eliminarProducto={eliminarProducto}
+                vaciarCarrito={vaciarCarrito}
                 total={total}
                 cantidadTotal={cantidadTotal}
               />
