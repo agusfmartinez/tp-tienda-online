@@ -1,9 +1,9 @@
 import NavBar from "./NavBar";
 
 
-function Header() {
+function Header({cantidadTotal}) {
     return <header className="sticky-top">
-        <NavBar/>
+        <NavBar cantidadTotal={cantidadTotal}/>
     </header>
 };
 
