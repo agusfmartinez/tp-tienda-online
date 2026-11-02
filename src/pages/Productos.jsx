@@ -109,7 +109,7 @@ const Productos = ({ agregarAlCarrito, toast, cerrarToast }) => {
                 <ProductCard
                   id={producto.id}
                   nombre={producto.nombre}
-                  precio={producto.precio}
+                  precio={producto.precio.toLocaleString('es-AR')}
                   agregar={() => agregarAlCarrito(producto)}
                   categoria={producto.categoria}
                   descripcion={producto.descripcion}

@@ -32,7 +32,7 @@ const DetalleProducto = ({ agregarAlCarrito, toast, cerrarToast }) => {
         <div className="col-12 col-md-6">
           <h2>{producto.nombre}</h2>
           <p className="text-muted">Categoría: {producto.categoria}</p>
-          <h3>${producto.precio}</h3>
+          <h3>${producto.precio.toLocaleString('es-AR')}</h3>
           <p>{producto.descripcion}</p>
 
           <h5>Características</h5>
