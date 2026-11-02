@@ -1,6 +1,4 @@
 /* Componente principal de la app */
-
-//import styles from "./App.module.css";
 import { Routes, Route } from "react-router";
 import Header from "./components/Header";
 import Inicio from "./pages/Inicio";
