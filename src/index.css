@@ -6,6 +6,16 @@
   --fuente-titulos: 'Fredoka', sans-serif;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root > main {
+  flex: 1;
+}
+
 body{
   background-color: gainsboro;
   font-family: var(--fuente-principal);
