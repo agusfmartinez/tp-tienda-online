@@ -41,12 +41,14 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Inicio agregarAlCarrito={agregarAlCarrito} />}
+            element={<Inicio agregarAlCarrito={agregarAlCarrito} carrito={carrito}/>}
           />
 
           <Route
             path="/productos"
-            element={<Productos agregarAlCarrito={agregarAlCarrito} />}
+            element={<Productos
+               agregarAlCarrito={agregarAlCarrito} 
+               carrito={carrito}/>}
           />
 
           <Route
