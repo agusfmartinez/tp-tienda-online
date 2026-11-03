@@ -33,6 +33,9 @@ const ProductCard = ({
         <p className="card-text">Stock: {stock}</p>
 
         <div className="d-flex flex-wrap gap-2 mt-auto">
+          {stock <= 0 && (
+            <p className="text-danger mt-2 productoSinStock">Producto sin stock</p>
+          )}
           <button
             className="btn btn-primary"
             onClick={agregar}
@@ -44,11 +47,7 @@ const ProductCard = ({
           <Link to={`/producto/${id}`} className='btn btn-light'>
             Ver más
           </Link>
-        </div>
-
-        {stock <= 0 && (
-          <p className="text-danger mt-2">Producto sin stock</p>
-        )}
+        </div> 
       </div>
     </div>
   )

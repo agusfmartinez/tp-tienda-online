@@ -68,7 +68,6 @@ header.sticky-top {
   --bs-nav-link-hover-color:#F4C095;
 }
 
-
 .hero {
   min-height: 80vh;
   background-size: cover;
@@ -145,4 +144,7 @@ header.sticky-top {
   margin-bottom: 0;
 }
 
+.productoSinStock {
+  margin-bottom: 1px;
+}
 
