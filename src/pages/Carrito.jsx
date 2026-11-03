@@ -92,7 +92,7 @@ const Carrito = ({
 
             <Link
               to="/formularioCompra"
-              className="btn btn-success"
+              className="btn btn-primary"
             >
               Finalizar compra
             </Link>

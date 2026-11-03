@@ -32,6 +32,7 @@ function App() {
       <Header cantidadTotal={cantidadTotal} />
       <ToastCarrito
         show={!!toast}
+        titulo={toast?.titulo}
         mensaje={toast?.mensaje}
         tipo={toast?.tipo}
         onClose={cerrarToast}

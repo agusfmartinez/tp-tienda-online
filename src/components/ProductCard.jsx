@@ -41,7 +41,7 @@ const ProductCard = ({
             Añadir al carrito
           </button>
 
-          <Link to={`/producto/${id}`} className='btn btn-secondary'>
+          <Link to={`/producto/${id}`} className='btn btn-light'>
             Ver más
           </Link>
         </div>

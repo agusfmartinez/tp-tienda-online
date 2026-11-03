@@ -55,7 +55,7 @@ const DetalleProducto = ({ agregarAlCarrito}) => {
             >
               Añadir al carrito
             </button>
-            <Link to="/productos" className="btn btn-secondary">
+            <Link to="/productos" className="btn btn-light">
               Volver al catálogo
             </Link>
           </div>

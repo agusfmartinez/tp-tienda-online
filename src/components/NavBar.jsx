@@ -7,7 +7,7 @@ import Badge from 'react-bootstrap/Badge';
 
 function AppNavBar({ cantidadTotal }) {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="navBar-estilos">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <Logo/>
@@ -20,7 +20,7 @@ function AppNavBar({ cantidadTotal }) {
             <Nav.Link as={NavLink} to="/carrito">
               Carrito{" "}
               {cantidadTotal > 0 && (
-                <Badge pill bg="danger">{cantidadTotal}</Badge>
+                <Badge pill className='badge-carrito'>{cantidadTotal}</Badge>
               )}
             </Nav.Link>
             <Nav.Link as={NavLink} to="/nosotros">Nosotros</Nav.Link>
