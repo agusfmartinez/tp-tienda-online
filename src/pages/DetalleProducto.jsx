@@ -44,10 +44,13 @@ const DetalleProducto = ({ agregarAlCarrito}) => {
           {producto.stock > 0 ? (
             <p>Stock disponible: {producto.stock}</p>
           ) : (
-            <p className="text-danger">Sin stock</p>
+            <p className="text-danger"><strong>No disponible</strong></p>
           )}
 
           <div className="d-flex gap-2">
+            <Link to="/productos" className="btn btn-light">
+              Volver al catálogo
+            </Link>
             <button
               className="btn btn-primary"
               onClick={() => agregarAlCarrito(producto)}
@@ -55,9 +58,6 @@ const DetalleProducto = ({ agregarAlCarrito}) => {
             >
               Añadir al carrito
             </button>
-            <Link to="/productos" className="btn btn-light">
-              Volver al catálogo
-            </Link>
           </div>
         </div>
       </div>

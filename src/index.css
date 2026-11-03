@@ -154,7 +154,6 @@ header.sticky-top {
   border-radius: 0.5rem;
   overflow: hidden;
   border: 1px solid var(--bs-border-color);
-  
 }
 
 .productoSinStock {
@@ -169,4 +168,8 @@ header.sticky-top {
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
+}
+
+.texto-card {
+  font-size: 1.23rem;
 }

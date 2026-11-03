@@ -20,22 +20,23 @@ const ProductCard = ({
         />
       </Link>
 
-      <div className="card-body d-flex flex-column">
+      <div className="card-body d-flex gap-3 flex-column">
         <h5 className="card-title">
           <Link to={`/producto/${id}`} className="tituloProducto">
             {nombre}
           </Link>
         </h5>
+        <p className="texto-card"><strong>Categoría:</strong> {categoria}</p>
+        <p className="texto-card"><strong>Unidades:</strong> {stock}</p>
+        <h3>${precio.toLocaleString('es-AR')}</h3>
 
-        <p className="card-text">{descripcion}</p>
-        <p className="card-text">Categoría: {categoria}</p>
-        <p className="card-text">Precio: ${precio.toLocaleString('es-AR')}</p>
-        <p className="card-text">Stock: {stock}</p>
-
-        <div className="d-flex flex-wrap gap-2 mt-auto">
+        <div className="d-flex flex-column gap-2 mt-auto">
           {stock <= 0 && (
-            <p className="text-danger mt-2 productoSinStock">Producto sin stock</p>
+            <p className="text-danger mt-2 productoSinStock text-center"><strong>No disponible</strong></p>
           )}
+          <Link to={`/producto/${id}`} className='btn btn-light'>
+            Ver más
+          </Link>
           <button
             className="btn btn-primary"
             onClick={agregar}
@@ -43,10 +44,6 @@ const ProductCard = ({
           >
             Añadir al carrito
           </button>
-
-          <Link to={`/producto/${id}`} className='btn btn-light'>
-            Ver más
-          </Link>
         </div> 
       </div>
     </div>
