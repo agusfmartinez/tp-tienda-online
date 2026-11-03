@@ -41,6 +41,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--fuente-titulos);
 }
 
+#tabla-carrito {
+  --bs-table-bg:
+  --bs-table-color: #5c1a1a;
+  --bs-table-border-color: #637074;
+  --bs-table-hover-bg: #a9c9ce;
+  margin-bottom: 0;
+}
+
+#tabla-carrito td {
+  border-bottom: none;
+}
+
+#tabla-carrito th {
+  font-size: 1.2rem;
+}
+
+.tabla-carrito-totales {
+  margin-top: 1rem;
+}
+
 header.sticky-top {
   box-shadow: 0 2px 8px rgba(199, 194, 194, 0.1);
 }
@@ -130,21 +150,23 @@ header.sticky-top {
   padding: 1rem;
 }
 
-.tabla-carrito {
+.contenedor-tabla-carrito {
   border-radius: 0.5rem;
   overflow: hidden;
   border: 1px solid var(--bs-border-color);
-}
-
-.tabla-carrito .table {
-  --bs-table-bg:
-  --bs-table-color: #5c1a1a;
-  --bs-table-border-color: #637074;
-  --bs-table-hover-bg: #a9c9ce;
-  margin-bottom: 0;
+  
 }
 
 .productoSinStock {
   margin-bottom: 1px;
 }
 
+.botones-carrito {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}

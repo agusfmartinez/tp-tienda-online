@@ -26,27 +26,27 @@ const Carrito = ({
         </div>
       ) : (
         <>
-          <div className="table-responsive tabla-carrito">
-            <table className="table table-hover align-middle">
+          <div className="table-responsive contenedor-tabla-carrito">
+            <table className="table table-hover align-middle" id='tabla-carrito'>
               <thead>
                 <tr>
                   <th className="celda-eliminar">Producto</th>
                   <th className="celda-eliminar">Precio unitario</th>
-                  <th className="celda-eliminar">Cantidad</th>
-                  <th className="celda-eliminar">Subtotal</th>
+                  <th className="celda-eliminar text-center">Cantidad</th>
+                  <th className="celda-eliminar text-center">Subtotal</th>
                 </tr>
               </thead>
 
               <tbody>
                 {carrito.map((producto) => (
                   <tr key={producto.id}>
-                    <td className="celda-eliminar">{producto.nombre}</td>
+                    <td text-center>{producto.nombre}</td>
 
-                    <td className="celda-eliminar">
+                    <td>
                       ${producto.precio.toLocaleString('es-AR')}
                     </td>
 
-                    <td className="celda-eliminar">
+                    <td className="text-center">
                       <button
                         className="btn btn-outline-dark btn-sm me-2"
                         onClick={() => disminuirCantidad(producto.id)}
@@ -63,13 +63,14 @@ const Carrito = ({
                       >
                         +
                       </button>
+                      
                     </td>
 
-                    <td className="celda-eliminar">
+                    <td className="text-center">
                       ${(producto.precio * producto.cantidad).toLocaleString('es-AR')}
                     </td>
 
-                    <td className="celda-eliminar text-center pe-4">
+                    <td className="text-center pe-4">
                       <button
                         className="btn btn-danger btn-sm"
                         onClick={() => eliminarProducto(producto.id)}
@@ -79,30 +80,40 @@ const Carrito = ({
                     </td>
                   </tr>
                 ))}
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td className="text-center">
+                    <h5 className="tabla-carrito-totales">Total: {cantidadTotal}</h5>
+                  </td>
+                  <td className="text-center">
+                    <h5 className="tabla-carrito-totales">Total: ${total.toLocaleString('es-AR')}</h5>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
 
-          <div className="d-flex justify-content-between align-items-center mt-4">
-
-            <p>
-              Cantidad total de productos: <strong>{cantidadTotal}</strong>
-            </p>
-
-            <h3>Total: ${total.toLocaleString('es-AR')}</h3>
-            <button
-              className="btn btn-danger"
-              onClick={vaciarCarrito}
-            >
+          <div className="botones-carrito">
+            <div className="p-2">
+              <button
+                className="btn btn-danger"
+                onClick={vaciarCarrito}
+              >
               Vaciar carrito
-            </button>
-            <Link
-              to="/formularioCompra"
-              className="btn btn-primary"
-            >
+              </button>
+            </div>
+            <div className="p-2">
+              <Link
+                to="/formularioCompra"
+                className="btn btn-primary"
+              >
               Finalizar compra
-            </Link>
+              </Link>
+            </div>
+          </div>
 
+          <div className="d-flex justify-content-between align-items-center mt-4">
           </div>
         </>
       )}
