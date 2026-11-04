@@ -87,8 +87,7 @@ header.sticky-top {
 
 .nav-link {
   display: block;
-  margin-left: 7rem;
-  
+  margin-left: 2rem;
   font-size: 1.5rem;
   font-weight: var(--bs-nav-link-font-weight);
   color: #FFFF;
@@ -184,3 +183,5 @@ header.sticky-top {
 .texto-card {
   font-size: 1.23rem;
 }
+
+
