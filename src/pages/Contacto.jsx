@@ -16,6 +16,8 @@ const Contacto = () => {
 
     if (formulario.nombre.trim() === '') {
       nuevosErrores.nombre = 'El nombre es obligatorio.';
+    }else if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(formulario.nombre)) {
+      nuevosErrores.nombre = "El nombre solo debe contener letras.";
     }
 
     if (formulario.email.trim() === '') {
