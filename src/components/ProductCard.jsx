@@ -21,11 +21,11 @@ const ProductCard = ({
       </Link>
 
       <div className="card-body d-flex gap-3 flex-column">
-        <h5 className="card-title">
+        <h4 className="card-title">
           <Link to={`/producto/${id}`} className="tituloProducto">
             {nombre}
           </Link>
-        </h5>
+        </h4>
         <p className="texto-card"><strong>Categoría:</strong> {categoria}</p>
         <p className="texto-card"><strong>Unidades:</strong> {stock}</p>
         <h3>${precio.toLocaleString('es-AR')}</h3>
