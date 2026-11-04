@@ -7,10 +7,10 @@ import Badge from 'react-bootstrap/Badge';
 
 function AppNavBar({ cantidadTotal }) {
   return (
-    <Navbar expand="lg" className="navBar-estilos">
+    <Navbar expand="lg" className="navbar-estilos gap-2">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <Logo/>
+          <Logo height={'100px'}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">

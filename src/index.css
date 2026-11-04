@@ -57,6 +57,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
 }
 
+.form-select:focus {
+  border-color: #1D7874;
+  box-shadow:  0 0 0 .25rem #1D7874;
+}
+
+.form-control:focus {
+  border-color: #1D7874;
+  box-shadow:  0 0 0 .25rem #1D7874;
+}
+
 .tabla-carrito-totales {
   margin-top: 1rem;
 }
@@ -65,7 +75,7 @@ header.sticky-top {
   box-shadow: 0 2px 8px rgba(199, 194, 194, 0.1);
 }
 
-.navBar-estilos {
+.navbar-estilos {
   background-color: #1D7874;
   color: #FFFF;
 }
@@ -77,8 +87,9 @@ header.sticky-top {
 
 .nav-link {
   display: block;
-  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-  font-size: var(--bs-nav-link-font-size);
+  margin-left: 7rem;
+  
+  font-size: 1.5rem;
   font-weight: var(--bs-nav-link-font-weight);
   color: #FFFF;
   text-decoration: none;
