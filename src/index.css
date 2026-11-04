@@ -79,7 +79,7 @@ header.sticky-top {
   box-shadow: 0 0 0 .25rem rgba(29, 120, 116, .25);
 }
 
-/* --- hero --- */
+/* --- inicio --- */
 .hero {
   min-height: 80vh;
   background-size: cover;
@@ -90,6 +90,12 @@ header.sticky-top {
   width: 100%;
   max-width: 300px;
   height: auto;
+}
+
+.imagenNosotros {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 /* --- cards --- */

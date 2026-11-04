@@ -3,6 +3,7 @@ import CategoryCard from '../components/CategoryCard';
 import ProductCard from '../components/ProductCard';
 import { useProductos } from '../hooks/productosHook';
 import { useCategorias } from '../hooks/categoriasHook';
+import { Link } from 'react-router';
 
 const Inicio = ({ agregarAlCarrito, carrito }) => {
 
@@ -61,15 +62,35 @@ const Inicio = ({ agregarAlCarrito, carrito }) => {
             </section>
 
             <section className='container py-5'>
-                <h2>Sobre nosotros</h2>
-                <p>
-                    En <strong>El Doggy Style</strong> somos una tienda dedicada
-                    a ofrecer productos para el cuidado, bienestar y diversión
-                    de las mascotas. Nuestro objetivo es brindar todo lo necesario
-                    para que tus compañeros de cuatro patas tengan una vida feliz
-                    y saludable.
-                </p>
+                <div className='row align-items-center g-4'>
+                    <div className='col-12 col-md-6'>
+                        <h2>Sobre nosotros</h2>
+                        <p>
+                            En <strong>El Doggy Style</strong> ofrecemos productos para el
+                            cuidado, bienestar y diversión de tus mascotas. Alimentos,
+                            juguetes, camas, accesorios e higiene, todo en un solo lugar.
+                        </p>
+                        <div className='d-flex gap-2 flex-wrap'>
+                            <Link to="/nosotros" className='btn btn-light'>
+                                Conocenos
+                            </Link>
+                            <Link to="/contacto" className='btn btn-primary'>
+                                Contactanos
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className='col-12 col-md-6'>
+                        <img
+                            src="https://imgs.search.brave.com/UDR-tRwF9TmVpewW2hxq41U80syQwXybjFG-XneFG9s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMw/ODM3MjMzMC9lcy9m/b3RvL3BhZHJlLXkt/aGlqby1wZXF1ZSVD/MyVCMW8tY29tcHJh/bi1lbi10aWVuZGEt/ZGUtbWFzY290YXMt/Y29uLXNjaG5hdXpl/ci5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9ZEE2bnE4Ty1D/SUN1ZWpRVnVhY2p4/eEVGODNQNTA2S0RM/T3ZFUEN5SW9Ocz0"
+                            alt="Interior de la tienda El Doggy Style"
+                            className='img-fluid rounded-3 shadow-sm imagenNosotros'
+                        />
+                    </div>
+
+                </div>
             </section>
+
         </>
     );
 };
