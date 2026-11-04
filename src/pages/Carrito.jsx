@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Link } from "react-router";
+import ModalConfirmacion from "../components/ModalConfirmacion";
 
 const Carrito = ({
   carrito,
@@ -9,6 +11,36 @@ const Carrito = ({
   total,
   cantidadTotal
 }) => {
+  
+  const [mostrarModal, setMostrarModal] = useState(false);
+  const [modalTitulo, setmodalTitulo] = useState('');
+  const [modalMensaje, setmodalMensaje] = useState('');
+  const [modalAccion, setmodalAccion] = useState(null);
+
+  function abrirModalEliminar(producto) {
+    setmodalTitulo('Eliminar producto');
+    setmodalMensaje(`¿Seguro que querés eliminar "${producto.nombre}" del carrito?`)
+    // al pasarl una funcion al use state, react la ejecuta y guarda el resultado, 
+    // por eso para guardar una funcion se tiene que envolver dentro de otra funcion
+    setmodalAccion(() => () => eliminarProducto(producto.id));
+    setMostrarModal(true);
+  }
+
+  function abrirModalVaciar(producto) {
+    setmodalTitulo('Vaciar carrito');
+    setmodalMensaje('¿Seguro que querés eliminar todos los productos del carrito?')
+    setmodalAccion(() => vaciarCarrito);
+    setMostrarModal(true);
+  }
+
+  function confirmarAccion() {
+    modalAccion()
+    setMostrarModal(null);
+  }
+
+  function cancelarAccion() {
+    setMostrarModal(null);
+  }
 
   return (
     <div className="container py-5">
@@ -74,7 +106,7 @@ const Carrito = ({
                     <td className="text-center pe-4">
                       <button
                         className="btn btn-danger btn-sm"
-                        onClick={() => eliminarProducto(producto.id)}
+                        onClick={() => abrirModalEliminar(producto)}
                       >
                         Eliminar
                       </button>
@@ -102,10 +134,11 @@ const Carrito = ({
             <div className="p-2">
               <button
                 className="btn btn-danger"
-                onClick={vaciarCarrito}
+                onClick={abrirModalVaciar}
               >
-              Vaciar carrito
+                Vaciar carrito
               </button>
+
             </div>
             <div className="p-2">
               <Link
@@ -118,7 +151,18 @@ const Carrito = ({
           </div>
         </>
       )}
+
+      
+      <ModalConfirmacion
+        show={mostrarModal}
+        titulo={modalTitulo }
+        mensaje={modalMensaje}
+        textoConfirmar="Eliminar"
+        onConfirmar={confirmarAccion}
+        onCancelar={cancelarAccion}
+      />
     </div>
+    
   );
 }
 
