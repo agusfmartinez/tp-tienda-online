@@ -30,11 +30,11 @@ const Carrito = ({
             <table className="table table-hover align-middle" id='tabla-carrito'>
               <thead>
                 <tr>
-                  <th className="celda-eliminar">Producto</th>
-                  <th className="celda-eliminar">Precio unitario</th>
-                  <th className="celda-eliminar text-center">Cantidad</th>
-                  <th className="celda-eliminar text-center">Subtotal</th>
-                  <th className="celda-eliminar"></th>
+                  <th >Producto</th>
+                  <th >Precio unitario</th>
+                  <th className="text-center">Cantidad</th>
+                  <th className="text-center">Subtotal</th>
+                  <th ></th>
                 </tr>
               </thead>
 
@@ -92,7 +92,7 @@ const Carrito = ({
                   <td className="text-center">
                     <h5 className="tabla-carrito-totales">Total: ${total.toLocaleString('es-AR')}</h5>
                   </td>
-                  <td className="celda-eliminar"></td>
+                  <td></td>
                 </tr>
               </tfoot>
             </table>
