@@ -81,6 +81,8 @@ const Carrito = ({
                     </td>
                   </tr>
                 ))}
+              </tbody>
+              <tfoot>
                 <tr>
                   <td></td>
                   <td></td>
@@ -92,7 +94,7 @@ const Carrito = ({
                   </td>
                   <td className="celda-eliminar"></td>
                 </tr>
-              </tbody>
+              </tfoot>
             </table>
           </div>
 
