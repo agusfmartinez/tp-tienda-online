@@ -54,8 +54,8 @@ export function useCarrito() {
       : 0;
 
     if (cantidadActual >= producto.stock) {
-      setToast({ mensaje: 'No hay más stock disponible.', titulo:'Carrito', tipo: 'danger' });
-      return 
+      mostrarToast({ mensaje: 'No hay más stock disponible.', titulo:'Carrito', tipo: 'danger' });
+      return
     }
 
     let nuevoCarrito;
@@ -73,7 +73,7 @@ export function useCarrito() {
       ];
     }
     actualizarCarrito(nuevoCarrito);
-    setToast({ mensaje: `¡${producto.nombre} se agregó al carrito!`, titulo:'Carrito', tipo: 'success' })
+    mostrarToast({ mensaje: `¡${producto.nombre} se agregó al carrito!`, titulo:'Carrito', tipo: 'success' })
   };
 
    function vaciarCarrito() {
@@ -83,6 +83,10 @@ export function useCarrito() {
   function cerrarToast() {
     setToast(null)
   };
+
+  function mostrarToast({mensaje, tipo = "success", titulo = "Aviso"}) {
+    setToast({ mensaje, tipo, titulo });
+  }
 
   const total = carrito.reduce((suma, item) =>
     suma + item.precio * item.cantidad, 0
@@ -102,7 +106,8 @@ return {
   total,
   cantidadTotal,
   toast,
-  cerrarToast
+  cerrarToast,
+  mostrarToast,
 };
 }
 

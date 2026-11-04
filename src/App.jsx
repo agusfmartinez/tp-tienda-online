@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import DetalleProducto from "./pages/DetalleProducto";
 import Contacto from "./pages/Contacto";
 import { useCarrito } from "./hooks/carritoHook";
-import ToastCarrito from "./components/ToastCarrito";
+import ToastGeneral from "./components/Toast";
 
 function App() {
   // Este seria el carrito que se crea solo una vez
@@ -25,12 +25,13 @@ function App() {
     cantidadTotal,
     toast,
     cerrarToast,
+    mostrarToast,
   } = useCarrito();
 
   return (
     <>
       <Header cantidadTotal={cantidadTotal} />
-      <ToastCarrito
+      <ToastGeneral
         show={!!toast}
         titulo={toast?.titulo}
         mensaje={toast?.mensaje}
@@ -75,6 +76,7 @@ function App() {
                 carrito={carrito}
                 total={total}
                 vaciarCarrito={vaciarCarrito}
+                mostrarToast={mostrarToast}
               />
             }
           />

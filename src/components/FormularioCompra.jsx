@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-function FormularioCompra({ carrito, total, vaciarCarrito }) {
+function FormularioCompra({ carrito, total, vaciarCarrito, mostrarToast }) {
 
   const [formulario, setFormulario] = useState({
 
@@ -11,19 +11,6 @@ function FormularioCompra({ carrito, total, vaciarCarrito }) {
     entrega: "",
     mensaje: "",
   });
-
-
-  const [toast, setToast] = useState(null);
-
-  useEffect(() => {
-    if (!toast) return;
-
-    const temporizador = setTimeout(() => {
-      setToast(null);
-    }, 5000);
-
-    return () => clearTimeout(temporizador);
-  }, [toast]);
 
   const handleChange = (e) => {
     setFormulario({
@@ -36,10 +23,12 @@ function FormularioCompra({ carrito, total, vaciarCarrito }) {
     e.preventDefault();
 
     if (carrito.length === 0) {
-      setToast({
+      mostrarToast({
         mensaje: "No hay ninguna compra pendiente.",
         tipo: "danger",
+        titulo:'Resumen Compra'
       });
+      return;
     }
 
     console.log("Datos del cliente:", formulario);
@@ -58,30 +47,17 @@ function FormularioCompra({ carrito, total, vaciarCarrito }) {
       mensaje: "",
     });
 
-    setToast({
-      mensaje: "¡Compra realizada correctamente!",
-      tipo: "success"
+    mostrarToast({
+      mensaje:'¡Muchas gracias!',
+      tipo:'success',
+      delay: 7000,
+      titulo:'¡Compra realizada correctamente!',
     });
   };
 
   return (
     <>
-      {toast && (
-        <div
-          className={`alert alert-${toast.tipo} alert-dismissible fade show position-fixed top-0 end-0 m-3`}
-          style={{ zIndex: 9999 }}// es par a que el toast se muestre por encima de otros elementos
-          role="alert"
-        >
-          {toast.mensaje}
-
-          <button
-            type="button"
-            className="btn-close"
-            onClick={() => setToast(null)}
-          ></button>
-        </div>
-      )}
-
+    
       <div className="container my-5">
         <h2>Formulario de compra</h2>
 
