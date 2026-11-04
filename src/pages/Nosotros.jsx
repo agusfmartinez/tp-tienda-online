@@ -1,5 +1,3 @@
-
-
 const Nosotros = () => {
   return (
     <div className="container my-5">

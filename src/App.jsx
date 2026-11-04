@@ -5,7 +5,7 @@ import Inicio from "./pages/Inicio";
 import Carrito from "./pages/Carrito";
 import Nosotros from "./pages/Nosotros";
 import Productos from "./pages/Productos";
-import FormularioCompra from "./components/FormularioCompra";
+import FormularioCompra from "./pages/FormularioCompra";
 import Footer from "./components/Footer";
 import DetalleProducto from "./pages/DetalleProducto";
 import Contacto from "./pages/Contacto";
@@ -37,6 +37,7 @@ function App() {
         mensaje={toast?.mensaje}
         tipo={toast?.tipo}
         onClose={cerrarToast}
+        delay={toast?.delay}
       />
       <main>
         <Routes>

@@ -31,10 +31,6 @@ function FormularioCompra({ carrito, total, vaciarCarrito, mostrarToast }) {
       return;
     }
 
-    console.log("Datos del cliente:", formulario);
-    console.log("Productos comprados:", carrito);
-    console.log("Total de la compra:", total);
-
     // Vaciamos el carrito compartido
     vaciarCarrito();
 
@@ -56,8 +52,6 @@ function FormularioCompra({ carrito, total, vaciarCarrito, mostrarToast }) {
   };
 
   return (
-    <>
-    
       <div className="container my-5">
         <h2>Formulario de compra</h2>
 
@@ -175,7 +169,6 @@ function FormularioCompra({ carrito, total, vaciarCarrito, mostrarToast }) {
           </button>
         </form>
       </div>
-    </>
   );
 }
 

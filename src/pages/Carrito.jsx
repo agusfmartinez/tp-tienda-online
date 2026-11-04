@@ -34,13 +34,14 @@ const Carrito = ({
                   <th className="celda-eliminar">Precio unitario</th>
                   <th className="celda-eliminar text-center">Cantidad</th>
                   <th className="celda-eliminar text-center">Subtotal</th>
+                  <th className="celda-eliminar"></th>
                 </tr>
               </thead>
 
               <tbody>
                 {carrito.map((producto) => (
                   <tr key={producto.id}>
-                    <td text-center>{producto.nombre}</td>
+                    <td>{producto.nombre}</td>
 
                     <td>
                       ${producto.precio.toLocaleString('es-AR')}
@@ -84,11 +85,12 @@ const Carrito = ({
                   <td></td>
                   <td></td>
                   <td className="text-center">
-                    <h5 className="tabla-carrito-totales">Total: {cantidadTotal}</h5>
+                    <h5 className="tabla-carrito-totales">Productos: {cantidadTotal}</h5>
                   </td>
                   <td className="text-center">
                     <h5 className="tabla-carrito-totales">Total: ${total.toLocaleString('es-AR')}</h5>
                   </td>
+                  <td className="celda-eliminar"></td>
                 </tr>
               </tbody>
             </table>
@@ -111,9 +113,6 @@ const Carrito = ({
               Finalizar compra
               </Link>
             </div>
-          </div>
-
-          <div className="d-flex justify-content-between align-items-center mt-4">
           </div>
         </>
       )}

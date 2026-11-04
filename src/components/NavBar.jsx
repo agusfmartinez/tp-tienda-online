@@ -7,18 +7,17 @@ import Badge from 'react-bootstrap/Badge';
 
 function AppNavBar({ cantidadTotal }) {
   return (
-    <Navbar expand="lg" className="navbar-estilos gap-2">
+    <Navbar expand="lg" className="navbar-estilos">
       <Container className='nav-smartphone'>
         <Navbar.Brand as={Link} to="/">
-          <Logo height={'100px'}/>
+          <Logo height={100}/>
         </Navbar.Brand>
 
         <div className='d-flex align-items-center py-2 gap-3 order-lg-last'>
           <Nav.Link as={NavLink} to="/carrito" className='d-flex align-items-center py-2 gap-2'>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
             shopping_cart
             </span>
-            {" "}
             {cantidadTotal > 0 && (
               <Badge pill className='badge-carrito'>{cantidadTotal}</Badge>
             )}
@@ -34,10 +33,6 @@ function AppNavBar({ cantidadTotal }) {
             <Nav.Link as={NavLink} to="/contacto">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        
-        
-        
-        
       </Container>
     </Navbar>
   );

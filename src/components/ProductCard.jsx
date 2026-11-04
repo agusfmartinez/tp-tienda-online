@@ -6,7 +6,6 @@ const ProductCard = ({
   precio,
   agregar,
   categoria,
-  descripcion,
   stock,
   imagen
 }) => {
